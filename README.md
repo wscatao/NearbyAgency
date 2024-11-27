@@ -1,0 +1,2 @@
+# AgenciaProximaAPI
+ AgenciaProximaAPI é uma interface de programação de aplicativos que facilita a busca de agências próximas com base em um código postal (CEP) fornecido. Ideal para desenvolvedores que precisam integrar serviços de localização em seus projetos, a API fornece informações detalhadas sobre agências disponíveis em uma determinada área, incluindo endereço, distância e horários de funcionamento.
