@@ -1,4 +1,4 @@
-package br.com.santander.AgenciaProximaAPI.interfaces.dto;
+package br.com.santander.nearagencyapi.interfaces.dto;
 
 import java.util.UUID;
 

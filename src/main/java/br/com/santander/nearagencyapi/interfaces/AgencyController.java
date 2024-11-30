@@ -1,6 +1,6 @@
-package br.com.santander.AgenciaProximaAPI.interfaces;
+package br.com.santander.nearagencyapi.interfaces;
 
-import br.com.santander.AgenciaProximaAPI.interfaces.dto.AgencyDTO;
+import br.com.santander.nearagencyapi.interfaces.dto.AgencyDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

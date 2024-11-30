@@ -1,10 +1,10 @@
-package br.com.santander.AgenciaProximaAPI;
+package br.com.santander.nearagencyapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AgenciaProximaApiApplicationTests {
+class NearAgencyApiApplicationTests {
 
 	@Test
 	void contextLoads() {
