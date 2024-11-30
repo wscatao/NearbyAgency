@@ -1,0 +1,31 @@
+{
+  "id" : "ca52c975-eb63-4dce-86a0-bad0f233021f",
+  "name" : "viacep.com.br_ws_01213003_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01213003/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01213-003\",\n  \"logradouro\": \"Rua General Osório\",\n  \"complemento\": \"de 331 ao fim - lado ímpar\",\n  \"unidade\": \"\",\n  \"bairro\": \"Santa Efigênia\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:58 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:58 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "ca52c975-eb63-4dce-86a0-bad0f233021f",
+  "persistent" : true,
+  "scenarioName" : "scenario-741-viacep.com.br-ws-01213003-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-741-viacep.com.br-ws-01213003-json-2",
+  "insertionIndex" : 1763
+}

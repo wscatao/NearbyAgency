@@ -1,0 +1,31 @@
+{
+  "id" : "6b2a3a48-2a03-4836-820d-bc36c8cbbe7b",
+  "name" : "viacep.com.br_ws_01151030_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01151030/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01151-030\",\n  \"logradouro\": \"Rua João de Barros\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:45 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:45 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "6b2a3a48-2a03-4836-820d-bc36c8cbbe7b",
+  "persistent" : true,
+  "scenarioName" : "scenario-878-viacep.com.br-ws-01151030-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-878-viacep.com.br-ws-01151030-json-2",
+  "insertionIndex" : 2035
+}

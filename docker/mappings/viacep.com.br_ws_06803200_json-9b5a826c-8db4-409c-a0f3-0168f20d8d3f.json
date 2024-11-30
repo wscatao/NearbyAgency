@@ -1,0 +1,31 @@
+{
+  "id" : "9b5a826c-8db4-409c-a0f3-0168f20d8d3f",
+  "name" : "viacep.com.br_ws_06803200_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06803200/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06803-200\",\n  \"logradouro\": \"Rua Dona Aurora Amaral Araújo\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Água Morna\",\n  \"localidade\": \"Embu das Artes\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3515004\",\n  \"gia\": \"2987\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6401\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:34:42 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:34:42 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "9b5a826c-8db4-409c-a0f3-0168f20d8d3f",
+  "persistent" : true,
+  "scenarioName" : "scenario-24-viacep.com.br-ws-06803200-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-24-viacep.com.br-ws-06803200-json-2",
+  "insertionIndex" : 3919
+}

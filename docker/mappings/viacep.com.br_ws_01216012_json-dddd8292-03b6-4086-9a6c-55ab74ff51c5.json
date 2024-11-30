@@ -1,0 +1,31 @@
+{
+  "id" : "dddd8292-03b6-4086-9a6c-55ab74ff51c5",
+  "name" : "viacep.com.br_ws_01216012_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01216012/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01216-012\",\n  \"logradouro\": \"Alameda Barão de Piracicaba\",\n  \"complemento\": \"de 356/357 ao fim\",\n  \"unidade\": \"\",\n  \"bairro\": \"Campos Elíseos\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:00 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:00 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "dddd8292-03b6-4086-9a6c-55ab74ff51c5",
+  "persistent" : true,
+  "scenarioName" : "scenario-726-viacep.com.br-ws-01216012-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-726-viacep.com.br-ws-01216012-json-2",
+  "insertionIndex" : 1732
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "57e5fd2d-c63c-43fd-bd95-ee838ce58fe6",
+  "name" : "viacep.com.br_ws_04717002_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/04717002/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"04717-002\",\n  \"logradouro\": \"Rua Alexandre Dumas\",\n  \"complemento\": \"de 957/958 a 1247/1248\",\n  \"unidade\": \"\",\n  \"bairro\": \"Chácara Santo Antônio (Zona Sul)\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:40:01 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:40:01 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "57e5fd2d-c63c-43fd-bd95-ee838ce58fe6",
+  "persistent" : true,
+  "scenarioName" : "scenario-52-viacep.com.br-ws-04717002-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-52-viacep.com.br-ws-04717002-json-2",
+  "insertionIndex" : 4425
+}

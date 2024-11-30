@@ -1,0 +1,31 @@
+{
+  "id" : "649fbbdc-f77a-433c-b615-6756f9453233",
+  "name" : "viacep.com.br_ws_01189900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01189900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01189-900\",\n  \"logradouro\": \"Rua José Paulino\",\n  \"complemento\": \"226\",\n  \"unidade\": \"Galeria Centro Comercial do Bom Retiro\",\n  \"bairro\": \"Bom Retiro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:49 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:49 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "649fbbdc-f77a-433c-b615-6756f9453233",
+  "persistent" : true,
+  "scenarioName" : "scenario-834-viacep.com.br-ws-01189900-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-834-viacep.com.br-ws-01189900-json-2",
+  "insertionIndex" : 1945
+}

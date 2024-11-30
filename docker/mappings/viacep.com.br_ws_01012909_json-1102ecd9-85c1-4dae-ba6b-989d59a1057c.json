@@ -1,0 +1,31 @@
+{
+  "id" : "1102ecd9-85c1-4dae-ba6b-989d59a1057c",
+  "name" : "viacep.com.br_ws_01012909_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01012909/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01012-909\",\n  \"logradouro\": \"Largo da Misericórdia\",\n  \"complemento\": \"23\",\n  \"unidade\": \"Edifício Ouro Para O Bem de São Paulo\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:36:35 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:36:35 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "1102ecd9-85c1-4dae-ba6b-989d59a1057c",
+  "persistent" : true,
+  "scenarioName" : "scenario-20-viacep.com.br-ws-01012909-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-20-viacep.com.br-ws-01012909-json-2",
+  "insertionIndex" : 40
+}

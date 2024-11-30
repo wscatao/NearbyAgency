@@ -1,0 +1,31 @@
+{
+  "id" : "3a49059d-9c8f-45bc-8100-41ceba0789b7",
+  "name" : "viacep.com.br_ws_09910470_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/09910470/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"09910-470\",\n  \"logradouro\": \"Avenida Visconde do Rio Branco\",\n  \"complemento\": \"(Jd Rey)\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"Diadema\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3513801\",\n  \"gia\": \"2860\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6377\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:40:43 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:40:43 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "3a49059d-9c8f-45bc-8100-41ceba0789b7",
+  "persistent" : true,
+  "scenarioName" : "scenario-10-viacep.com.br-ws-09910470-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-10-viacep.com.br-ws-09910470-json-2",
+  "insertionIndex" : 4340
+}

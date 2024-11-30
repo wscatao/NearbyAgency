@@ -1,0 +1,31 @@
+{
+  "id" : "6edc5e65-6e04-4216-8e04-887492cddf45",
+  "name" : "viacep.com.br_ws_01007901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01007901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01007-901\",\n  \"logradouro\": \"Rua Riachuelo\",\n  \"complemento\": \"44\",\n  \"unidade\": \"Condomínio Santa Francisca\",\n  \"bairro\": \"Sé\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:34:24 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:34:24 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "6edc5e65-6e04-4216-8e04-887492cddf45",
+  "persistent" : true,
+  "scenarioName" : "scenario-67-viacep.com.br-ws-01007901-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-67-viacep.com.br-ws-01007901-json-2",
+  "insertionIndex" : 134
+}

@@ -1,0 +1,15 @@
+{
+  "id" : "a6dac986-697f-4b8b-926f-b7eb45cb6cdc",
+  "name" : "viacep.com.br_ws_01318020_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01318020/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 500,
+    "base64Body" : "TmV0d29yayBmYWlsdXJlIHRyeWluZyB0byBtYWtlIGEgcHJveGllZCByZXF1ZXN0IGZyb20gV2lyZU1vY2sgdG8gaHR0cHM6Ly92aWFjZXAuY29tLmJyLy92aWFjZXAuY29tLmJyL3dzLzAxMzE4MDIwL2pzb24vDQpDb25uZWN0IHRvIGh0dHBzOi8vdmlhY2VwLmNvbS5icjo0NDMgW3ZpYWNlcC5jb20uYnIvMTY1LjIyNy4xMjYuMjQxXSBmYWlsZWQ6IENvbm5lY3Rpb24gcmVmdXNlZCAoQ29ubmVjdGlvbiByZWZ1c2VkKQ=="
+  },
+  "uuid" : "a6dac986-697f-4b8b-926f-b7eb45cb6cdc",
+  "persistent" : true,
+  "insertionIndex" : 252
+}

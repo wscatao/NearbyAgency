@@ -1,0 +1,30 @@
+{
+  "id" : "371f425e-7492-4aa0-b0a5-12180d29cce6",
+  "name" : "viacep.com.br_ws_01155900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01155900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01155-900\",\n  \"logradouro\": \"Alameda Olga\",\n  \"complemento\": \"315\",\n  \"unidade\": \"Aranda Editora Técnica e Cultural Ltda\",\n  \"bairro\": \"Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:48 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:48 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "371f425e-7492-4aa0-b0a5-12180d29cce6",
+  "persistent" : true,
+  "scenarioName" : "scenario-849-viacep.com.br-ws-01155900-json",
+  "requiredScenarioState" : "scenario-849-viacep.com.br-ws-01155900-json-2",
+  "insertionIndex" : 1967
+}

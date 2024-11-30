@@ -1,0 +1,31 @@
+{
+  "id" : "954b1842-e879-49eb-8ce8-c7e170569e9e",
+  "name" : "viacep.com.br_ws_06784397_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06784397/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06784-397\",\n  \"logradouro\": \"Rua Jasson Diolino Souza\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Record\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:21:42 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:21:42 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "954b1842-e879-49eb-8ce8-c7e170569e9e",
+  "persistent" : true,
+  "scenarioName" : "scenario-101-viacep.com.br-ws-06784397-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-101-viacep.com.br-ws-06784397-json-2",
+  "insertionIndex" : 3589
+}

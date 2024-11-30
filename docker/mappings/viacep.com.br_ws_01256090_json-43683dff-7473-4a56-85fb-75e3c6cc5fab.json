@@ -1,0 +1,31 @@
+{
+  "id" : "43683dff-7473-4a56-85fb-75e3c6cc5fab",
+  "name" : "viacep.com.br_ws_01256090_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01256090/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01256-090\",\n  \"logradouro\": \"Praça Joanópolis\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Sumaré\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:42 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:42 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "43683dff-7473-4a56-85fb-75e3c6cc5fab",
+  "persistent" : true,
+  "scenarioName" : "scenario-287-viacep.com.br-ws-01256090-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-287-viacep.com.br-ws-01256090-json-2",
+  "insertionIndex" : 853
+}

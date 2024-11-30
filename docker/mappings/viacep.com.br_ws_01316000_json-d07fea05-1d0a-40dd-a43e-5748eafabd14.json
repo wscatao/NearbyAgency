@@ -1,0 +1,31 @@
+{
+  "id" : "d07fea05-1d0a-40dd-a43e-5748eafabd14",
+  "name" : "viacep.com.br_ws_01316000_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01316000/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01316-000\",\n  \"logradouro\": \"Rua Francisca Miquelina\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:10 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:10 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "d07fea05-1d0a-40dd-a43e-5748eafabd14",
+  "persistent" : true,
+  "scenarioName" : "scenario-13-viacep.com.br-ws-01316000-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-13-viacep.com.br-ws-01316000-json-2",
+  "insertionIndex" : 300
+}

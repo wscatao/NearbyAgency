@@ -1,0 +1,31 @@
+{
+  "id" : "1736af65-7858-4b0c-8a66-b60553c7e964",
+  "name" : "viacep.com.br_ws_01015900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01015900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01015-900\",\n  \"logradouro\": \"Praça Padre Manuel da Nóbrega\",\n  \"complemento\": \"16\",\n  \"unidade\": \"Edifício Antônio da Nóbrega\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:43 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:43 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "1736af65-7858-4b0c-8a66-b60553c7e964",
+  "persistent" : true,
+  "scenarioName" : "scenario-1520-viacep.com.br-ws-01015900-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1520-viacep.com.br-ws-01015900-json-2",
+  "insertionIndex" : 3317
+}

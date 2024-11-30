@@ -1,0 +1,31 @@
+{
+  "id" : "85a5e632-2228-47ca-ab48-6321a111f1a2",
+  "name" : "viacep.com.br_ws_01034020_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01034020/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01034-020\",\n  \"logradouro\": \"Rua Capitão Salomão\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:58 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:58 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "85a5e632-2228-47ca-ab48-6321a111f1a2",
+  "persistent" : true,
+  "scenarioName" : "scenario-1357-viacep.com.br-ws-01034020-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1357-viacep.com.br-ws-01034020-json-2",
+  "insertionIndex" : 2995
+}

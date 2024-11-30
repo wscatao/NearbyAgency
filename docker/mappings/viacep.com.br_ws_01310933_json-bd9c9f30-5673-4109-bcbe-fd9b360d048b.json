@@ -1,0 +1,31 @@
+{
+  "id" : "bd9c9f30-5673-4109-bcbe-fd9b360d048b",
+  "name" : "viacep.com.br_ws_01310933_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01310933/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01310-933\",\n  \"logradouro\": \"Avenida Paulista\",\n  \"complemento\": \"2444\",\n  \"unidade\": \"Edifício Ouro Verde.\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:01 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:01 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "bd9c9f30-5673-4109-bcbe-fd9b360d048b",
+  "persistent" : true,
+  "scenarioName" : "scenario-96-viacep.com.br-ws-01310933-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-96-viacep.com.br-ws-01310933-json-2",
+  "insertionIndex" : 463
+}

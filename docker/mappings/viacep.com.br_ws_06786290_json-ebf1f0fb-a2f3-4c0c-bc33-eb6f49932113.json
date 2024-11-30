@@ -1,0 +1,31 @@
+{
+  "id" : "ebf1f0fb-a2f3-4c0c-bc33-eb6f49932113",
+  "name" : "viacep.com.br_ws_06786290_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06786290/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06786-290\",\n  \"logradouro\": \"Rua Batalha\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim das Margaridas\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:28:53 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:28:53 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "ebf1f0fb-a2f3-4c0c-bc33-eb6f49932113",
+  "persistent" : true,
+  "scenarioName" : "scenario-16-viacep.com.br-ws-06786290-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-16-viacep.com.br-ws-06786290-json-2",
+  "insertionIndex" : 3826
+}

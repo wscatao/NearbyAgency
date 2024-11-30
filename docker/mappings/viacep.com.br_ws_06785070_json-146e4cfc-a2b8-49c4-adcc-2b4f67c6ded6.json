@@ -1,0 +1,30 @@
+{
+  "id" : "146e4cfc-a2b8-49c4-adcc-2b4f67c6ded6",
+  "name" : "viacep.com.br_ws_06785070_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06785070/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06785-070\",\n  \"logradouro\": \"Rua Marechal Artur da Costa e Silva\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Panorama\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:23:07 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:23:07 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "146e4cfc-a2b8-49c4-adcc-2b4f67c6ded6",
+  "persistent" : true,
+  "scenarioName" : "scenario-59-viacep.com.br-ws-06785070-json",
+  "requiredScenarioState" : "scenario-59-viacep.com.br-ws-06785070-json-2",
+  "insertionIndex" : 3504
+}

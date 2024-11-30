@@ -1,0 +1,31 @@
+{
+  "id" : "efa5ab98-a7c6-45f3-b6f8-017375aae16d",
+  "name" : "viacep.com.br_ws_06787580_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06787580/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06787-580\",\n  \"logradouro\": \"Rua Caoby José Soares\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Saint Moritz\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:32:54 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:32:54 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "efa5ab98-a7c6-45f3-b6f8-017375aae16d",
+  "persistent" : true,
+  "scenarioName" : "scenario-132-viacep.com.br-ws-06787580-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-132-viacep.com.br-ws-06787580-json-2",
+  "insertionIndex" : 4135
+}

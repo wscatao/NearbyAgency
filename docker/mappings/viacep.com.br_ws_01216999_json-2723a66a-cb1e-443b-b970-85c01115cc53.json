@@ -1,0 +1,30 @@
+{
+  "id" : "2723a66a-cb1e-443b-b970-85c01115cc53",
+  "name" : "viacep.com.br_ws_01216999_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01216999/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01216-999\",\n  \"logradouro\": \"Alameda Nothmann\",\n  \"complemento\": \"73\",\n  \"unidade\": \"Serv Carta, Cartão e Envelope-Encomenda Resposta - AC Bom Retiro\",\n  \"bairro\": \"Campos Elíseos\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:00 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:00 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "2723a66a-cb1e-443b-b970-85c01115cc53",
+  "persistent" : true,
+  "scenarioName" : "scenario-724-viacep.com.br-ws-01216999-json",
+  "requiredScenarioState" : "scenario-724-viacep.com.br-ws-01216999-json-2",
+  "insertionIndex" : 1720
+}

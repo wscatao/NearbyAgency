@@ -1,0 +1,30 @@
+{
+  "id" : "084a6479-70e3-4772-90bd-1df86664ae54",
+  "name" : "viacep.com.br_ws_01257900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01257900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01257-900\",\n  \"logradouro\": \"Rua Paracuê\",\n  \"complemento\": \"293\",\n  \"unidade\": \"Edifício Castro Alves\",\n  \"bairro\": \"Sumaré\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:45 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:45 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "084a6479-70e3-4772-90bd-1df86664ae54",
+  "persistent" : true,
+  "scenarioName" : "scenario-262-viacep.com.br-ws-01257900-json",
+  "requiredScenarioState" : "scenario-262-viacep.com.br-ws-01257900-json-2",
+  "insertionIndex" : 795
+}

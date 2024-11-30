@@ -1,0 +1,31 @@
+{
+  "id" : "e5e35e11-188d-4bea-a45c-2a513d068f73",
+  "name" : "viacep.com.br_ws_01134901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01134901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01134-901\",\n  \"logradouro\": \"Avenida Rudge\",\n  \"complemento\": \"700\",\n  \"unidade\": \"Legião da Boa Vontade\",\n  \"bairro\": \"Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:35 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:35 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "e5e35e11-188d-4bea-a45c-2a513d068f73",
+  "persistent" : true,
+  "scenarioName" : "scenario-977-viacep.com.br-ws-01134901-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-977-viacep.com.br-ws-01134901-json-2",
+  "insertionIndex" : 2240
+}

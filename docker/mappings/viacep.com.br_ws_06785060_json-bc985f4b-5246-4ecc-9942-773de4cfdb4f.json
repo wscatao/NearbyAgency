@@ -1,0 +1,30 @@
+{
+  "id" : "bc985f4b-5246-4ecc-9942-773de4cfdb4f",
+  "name" : "viacep.com.br_ws_06785060_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06785060/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06785-060\",\n  \"logradouro\": \"Rua Paulo Meneguette\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Panorama\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:23:05 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:23:05 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "bc985f4b-5246-4ecc-9942-773de4cfdb4f",
+  "persistent" : true,
+  "scenarioName" : "scenario-60-viacep.com.br-ws-06785060-json",
+  "requiredScenarioState" : "scenario-60-viacep.com.br-ws-06785060-json-2",
+  "insertionIndex" : 3506
+}

@@ -1,0 +1,30 @@
+{
+  "id" : "00237c81-4373-4422-b8e1-d92d0d406a0b",
+  "name" : "viacep.com.br_ws_06783300_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06783300/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06783-300\",\n  \"logradouro\": \"Rua Silvino Alves Costa\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Trianon\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:19:09 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:19:09 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "00237c81-4373-4422-b8e1-d92d0d406a0b",
+  "persistent" : true,
+  "scenarioName" : "scenario-178-viacep.com.br-ws-06783300-json",
+  "requiredScenarioState" : "scenario-178-viacep.com.br-ws-06783300-json-2",
+  "insertionIndex" : 3742
+}

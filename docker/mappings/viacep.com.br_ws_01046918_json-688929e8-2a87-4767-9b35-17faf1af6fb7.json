@@ -1,0 +1,31 @@
+{
+  "id" : "688929e8-2a87-4767-9b35-17faf1af6fb7",
+  "name" : "viacep.com.br_ws_01046918_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01046918/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01046-918\",\n  \"logradouro\": \"Avenida Ipiranga\",\n  \"complemento\": \"104\",\n  \"unidade\": \"Edifício Império I\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:12 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:12 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "688929e8-2a87-4767-9b35-17faf1af6fb7",
+  "persistent" : true,
+  "scenarioName" : "scenario-1211-viacep.com.br-ws-01046918-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1211-viacep.com.br-ws-01046918-json-2",
+  "insertionIndex" : 2706
+}

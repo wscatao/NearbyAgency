@@ -1,0 +1,31 @@
+{
+  "id" : "b3a2683a-796e-4775-b613-9d17d2c5ac9f",
+  "name" : "viacep.com.br_ws_06803260_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06803260/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06803-260\",\n  \"logradouro\": \"Rua Antenor Carlos Vaz\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"Embu das Artes\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3515004\",\n  \"gia\": \"2987\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6401\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:34:53 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:34:53 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "b3a2683a-796e-4775-b613-9d17d2c5ac9f",
+  "persistent" : true,
+  "scenarioName" : "scenario-13-viacep.com.br-ws-06803260-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-13-viacep.com.br-ws-06803260-json-2",
+  "insertionIndex" : 3897
+}

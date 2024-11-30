@@ -1,0 +1,30 @@
+{
+  "id" : "6ac37cca-d1e6-4c93-97b5-9a08e0fa82ab",
+  "name" : "viacep.com.br_ws_06784262_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06784262/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06784-262\",\n  \"logradouro\": \"Rua Luiz Carlos Prestes\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Sítio das Madres\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:20:36 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:20:36 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "6ac37cca-d1e6-4c93-97b5-9a08e0fa82ab",
+  "persistent" : true,
+  "scenarioName" : "scenario-135-viacep.com.br-ws-06784262-json",
+  "requiredScenarioState" : "scenario-135-viacep.com.br-ws-06784262-json-2",
+  "insertionIndex" : 3656
+}

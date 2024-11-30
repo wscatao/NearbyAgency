@@ -1,0 +1,31 @@
+{
+  "id" : "f7f5ebf6-295d-405d-b0d9-82710693a4c8",
+  "name" : "viacep.com.br_ws_01013911_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01013911/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01013-911\",\n  \"logradouro\": \"Rua Quinze de Novembro\",\n  \"complemento\": \"228\",\n  \"unidade\": \"Edifício Conde Eduardo de Matarazzo\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:37:12 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:37:12 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "f7f5ebf6-295d-405d-b0d9-82710693a4c8",
+  "persistent" : true,
+  "scenarioName" : "scenario-7-viacep.com.br-ws-01013911-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-7-viacep.com.br-ws-01013911-json-2",
+  "insertionIndex" : 14
+}

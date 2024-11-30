@@ -1,0 +1,31 @@
+{
+  "id" : "354875eb-eb92-45a5-8a34-9329f061db55",
+  "name" : "viacep.com.br_ws_06785040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06785040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06785-040\",\n  \"logradouro\": \"Rua Luiz Queiróz\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Scândia\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:22:58 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:22:58 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "354875eb-eb92-45a5-8a34-9329f061db55",
+  "persistent" : true,
+  "scenarioName" : "scenario-63-viacep.com.br-ws-06785040-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-63-viacep.com.br-ws-06785040-json-2",
+  "insertionIndex" : 3513
+}

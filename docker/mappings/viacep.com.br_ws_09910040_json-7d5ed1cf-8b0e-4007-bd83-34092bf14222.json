@@ -1,0 +1,31 @@
+{
+  "id" : "7d5ed1cf-8b0e-4007-bd83-34092bf14222",
+  "name" : "viacep.com.br_ws_09910040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/09910040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"09910-040\",\n  \"logradouro\": \"Rua Gaspar Ricardo\",\n  \"complemento\": \"(Prq S Setembro)\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"Diadema\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3513801\",\n  \"gia\": \"2860\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6377\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:40:08 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:40:08 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "7d5ed1cf-8b0e-4007-bd83-34092bf14222",
+  "persistent" : true,
+  "scenarioName" : "scenario-45-viacep.com.br-ws-09910040-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-45-viacep.com.br-ws-09910040-json-2",
+  "insertionIndex" : 4410
+}

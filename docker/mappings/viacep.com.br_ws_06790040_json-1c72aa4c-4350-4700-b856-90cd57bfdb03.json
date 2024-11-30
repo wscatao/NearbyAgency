@@ -1,0 +1,31 @@
+{
+  "id" : "1c72aa4c-4350-4700-b856-90cd57bfdb03",
+  "name" : "viacep.com.br_ws_06790040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06790040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06790-040\",\n  \"logradouro\": \"Rua Izidro Gonçalves\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Três Marias\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:33:21 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:33:21 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "1c72aa4c-4350-4700-b856-90cd57bfdb03",
+  "persistent" : true,
+  "scenarioName" : "scenario-105-viacep.com.br-ws-06790040-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-105-viacep.com.br-ws-06790040-json-2",
+  "insertionIndex" : 4081
+}

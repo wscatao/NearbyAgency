@@ -1,0 +1,30 @@
+{
+  "id" : "4dd8fde8-e24e-4ebf-9650-914f02d41945",
+  "name" : "viacep.com.br_ws_06786305_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06786305/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06786-305\",\n  \"logradouro\": \"Alameda Isolina Américo Tavares\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Elizabete\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:29:06 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:29:06 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "4dd8fde8-e24e-4ebf-9650-914f02d41945",
+  "persistent" : true,
+  "scenarioName" : "scenario-13-viacep.com.br-ws-06786305-json",
+  "requiredScenarioState" : "scenario-13-viacep.com.br-ws-06786305-json-2",
+  "insertionIndex" : 3819
+}

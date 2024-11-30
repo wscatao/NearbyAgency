@@ -1,0 +1,30 @@
+{
+  "id" : "3eebf885-5abd-48a0-8f36-11b0656ea636",
+  "name" : "viacep.com.br_ws_01223907_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01223907/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01223-907\",\n  \"logradouro\": \"Rua General Jardim\",\n  \"complemento\": \"482\",\n  \"unidade\": \"Edifício Itan\",\n  \"bairro\": \"Vila Buarque\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:07 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:07 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "3eebf885-5abd-48a0-8f36-11b0656ea636",
+  "persistent" : true,
+  "scenarioName" : "scenario-659-viacep.com.br-ws-01223907-json",
+  "requiredScenarioState" : "scenario-659-viacep.com.br-ws-01223907-json-2",
+  "insertionIndex" : 1586
+}

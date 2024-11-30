@@ -1,0 +1,30 @@
+{
+  "id" : "85cc4cb3-57bc-416e-9cbd-ab3682caa1bd",
+  "name" : "viacep.com.br_ws_01209010_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01209010/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01209-010\",\n  \"logradouro\": \"Praça Júlio Mesquita\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Santa Efigênia\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:56 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:56 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "85cc4cb3-57bc-416e-9cbd-ab3682caa1bd",
+  "persistent" : true,
+  "scenarioName" : "scenario-766-viacep.com.br-ws-01209010-json",
+  "requiredScenarioState" : "scenario-766-viacep.com.br-ws-01209010-json-2",
+  "insertionIndex" : 1804
+}

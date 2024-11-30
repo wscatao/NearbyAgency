@@ -1,0 +1,30 @@
+{
+  "id" : "73a00d99-fecd-4c82-95e5-8178b8662bfc",
+  "name" : "viacep.com.br_ws_01150901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01150901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01150-901\",\n  \"logradouro\": \"Avenida General Olímpio da Silveira\",\n  \"complemento\": \"190\",\n  \"unidade\": \"Igreja Quadrangular\",\n  \"bairro\": \"Santa Cecília\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:45 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:45 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "73a00d99-fecd-4c82-95e5-8178b8662bfc",
+  "persistent" : true,
+  "scenarioName" : "scenario-881-viacep.com.br-ws-01150901-json",
+  "requiredScenarioState" : "scenario-881-viacep.com.br-ws-01150901-json-2",
+  "insertionIndex" : 2031
+}

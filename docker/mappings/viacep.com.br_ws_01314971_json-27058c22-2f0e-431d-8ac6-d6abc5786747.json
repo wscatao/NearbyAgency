@@ -1,0 +1,31 @@
+{
+  "id" : "27058c22-2f0e-431d-8ac6-d6abc5786747",
+  "name" : "viacep.com.br_ws_01314971_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01314971/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01314-971\",\n  \"logradouro\": \"Rua Santo Amaro\",\n  \"complemento\": \"245\",\n  \"unidade\": \"AGF Nove de Julho\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:08 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:08 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "27058c22-2f0e-431d-8ac6-d6abc5786747",
+  "persistent" : true,
+  "scenarioName" : "scenario-25-viacep.com.br-ws-01314971-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-25-viacep.com.br-ws-01314971-json-2",
+  "insertionIndex" : 327
+}

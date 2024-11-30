@@ -1,0 +1,31 @@
+{
+  "id" : "d14ebc40-f277-40d6-95c2-e8289fe027c2",
+  "name" : "viacep.com.br_ws_01224900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01224900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01224-900\",\n  \"logradouro\": \"Rua Martinico Prado\",\n  \"complemento\": \"90\",\n  \"unidade\": \"Edifício Juriti\",\n  \"bairro\": \"Vila Buarque\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:07 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:07 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "d14ebc40-f277-40d6-95c2-e8289fe027c2",
+  "persistent" : true,
+  "scenarioName" : "scenario-645-viacep.com.br-ws-01224900-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-645-viacep.com.br-ws-01224900-json-2",
+  "insertionIndex" : 1572
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "8d470f76-80c7-48d0-adcc-527f4761f778",
+  "name" : "viacep.com.br_ws_01302904_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01302904/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01302-904\",\n  \"logradouro\": \"Rua da Consolação\",\n  \"complemento\": \"368\",\n  \"unidade\": \"Edifício Luís Mattos\",\n  \"bairro\": \"Consolação\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:49 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:49 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "8d470f76-80c7-48d0-adcc-527f4761f778",
+  "persistent" : true,
+  "scenarioName" : "scenario-215-viacep.com.br-ws-01302904-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-215-viacep.com.br-ws-01302904-json-2",
+  "insertionIndex" : 709
+}

@@ -1,0 +1,13 @@
+# Sample compose file
+version: "3"
+
+services:
+  wiremock:
+    image: "wiremock/wiremock:latest"
+    container_name: via_cep_mock
+    volumes:
+      - ./__files:/home/wiremock/__files
+      - ./mappings:/home/wiremock/mappings
+    ports:
+      - 8081:8080
+    entrypoint: ["/docker-entrypoint.sh", "--verbose"]

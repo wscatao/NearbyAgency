@@ -1,0 +1,31 @@
+{
+  "id" : "bc1b5cc0-5a58-4d23-baae-c9bf0fc8f7e7",
+  "name" : "viacep.com.br_ws_01302908_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01302908/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01302-908\",\n  \"logradouro\": \"Rua da Consolação\",\n  \"complemento\": \"382\",\n  \"unidade\": \"Transcontinental FM\",\n  \"bairro\": \"Consolação\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:50 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:50 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "bc1b5cc0-5a58-4d23-baae-c9bf0fc8f7e7",
+  "persistent" : true,
+  "scenarioName" : "scenario-212-viacep.com.br-ws-01302908-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-212-viacep.com.br-ws-01302908-json-2",
+  "insertionIndex" : 700
+}

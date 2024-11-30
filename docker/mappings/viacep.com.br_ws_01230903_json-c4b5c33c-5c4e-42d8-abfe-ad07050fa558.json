@@ -1,0 +1,31 @@
+{
+  "id" : "c4b5c33c-5c4e-42d8-abfe-ad07050fa558",
+  "name" : "viacep.com.br_ws_01230903_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01230903/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01230-903\",\n  \"logradouro\": \"Rua Doutor Albuquerque Lins\",\n  \"complemento\": \"818\",\n  \"unidade\": \"Edifício Solar dos Ipês\",\n  \"bairro\": \"Santa Cecília\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:13 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:13 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "c4b5c33c-5c4e-42d8-abfe-ad07050fa558",
+  "persistent" : true,
+  "scenarioName" : "scenario-586-viacep.com.br-ws-01230903-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-586-viacep.com.br-ws-01230903-json-2",
+  "insertionIndex" : 1448
+}

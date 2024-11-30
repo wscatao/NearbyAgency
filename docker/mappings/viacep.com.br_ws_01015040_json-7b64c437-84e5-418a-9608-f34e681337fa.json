@@ -1,0 +1,31 @@
+{
+  "id" : "7b64c437-84e5-418a-9608-f34e681337fa",
+  "name" : "viacep.com.br_ws_01015040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01015040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01015-040\",\n  \"logradouro\": \"Rua Maria Benedita\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:42 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:42 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "7b64c437-84e5-418a-9608-f34e681337fa",
+  "persistent" : true,
+  "scenarioName" : "scenario-1522-viacep.com.br-ws-01015040-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1522-viacep.com.br-ws-01015040-json-2",
+  "insertionIndex" : 3330
+}

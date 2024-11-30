@@ -1,0 +1,30 @@
+{
+  "id" : "b0e757b6-08cf-4cc1-a61e-a789fadae1b3",
+  "name" : "viacep.com.br_ws_01042910_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01042910/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01042-910\",\n  \"logradouro\": \"Rua Barão de Itapetininga\",\n  \"complemento\": \"163\",\n  \"unidade\": \"Edifício Louza\",\n  \"bairro\": \"República\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:06 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:06 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "b0e757b6-08cf-4cc1-a61e-a789fadae1b3",
+  "persistent" : true,
+  "scenarioName" : "scenario-1276-viacep.com.br-ws-01042910-json",
+  "requiredScenarioState" : "scenario-1276-viacep.com.br-ws-01042910-json-2",
+  "insertionIndex" : 2825
+}

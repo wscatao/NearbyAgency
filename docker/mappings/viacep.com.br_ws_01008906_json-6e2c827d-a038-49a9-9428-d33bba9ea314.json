@@ -1,0 +1,31 @@
+{
+  "id" : "6e2c827d-a038-49a9-9428-d33bba9ea314",
+  "name" : "viacep.com.br_ws_01008906_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01008906/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01008-906\",\n  \"logradouro\": \"Rua Líbero Badaró\",\n  \"complemento\": \"504\",\n  \"unidade\": \"Edifício Martinelli\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:34:57 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:34:57 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "6e2c827d-a038-49a9-9428-d33bba9ea314",
+  "persistent" : true,
+  "scenarioName" : "scenario-55-viacep.com.br-ws-01008906-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-55-viacep.com.br-ws-01008906-json-2",
+  "insertionIndex" : 110
+}

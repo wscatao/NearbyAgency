@@ -1,0 +1,31 @@
+{
+  "id" : "96178c00-1bd2-4d19-be15-7b26f704d6d4",
+  "name" : "viacep.com.br_ws_01007904_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01007904/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01007-904\",\n  \"logradouro\": \"Rua Riachuelo\",\n  \"complemento\": \"115\",\n  \"unidade\": \"Ministério Público do Estado de São Paulo - P. Geral da Justiça\",\n  \"bairro\": \"Sé\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:34:27 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:34:27 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "96178c00-1bd2-4d19-be15-7b26f704d6d4",
+  "persistent" : true,
+  "scenarioName" : "scenario-66-viacep.com.br-ws-01007904-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-66-viacep.com.br-ws-01007904-json-2",
+  "insertionIndex" : 132
+}

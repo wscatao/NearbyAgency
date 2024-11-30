@@ -1,0 +1,31 @@
+{
+  "id" : "516a6139-f177-4d0f-b8c3-67e2e1d0e439",
+  "name" : "viacep.com.br_ws_06803310_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06803310/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06803-310\",\n  \"logradouro\": \"Rua Lícia Borges\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"Embu das Artes\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3515004\",\n  \"gia\": \"2987\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6401\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:35:01 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:35:01 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "516a6139-f177-4d0f-b8c3-67e2e1d0e439",
+  "persistent" : true,
+  "scenarioName" : "scenario-5-viacep.com.br-ws-06803310-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-5-viacep.com.br-ws-06803310-json-2",
+  "insertionIndex" : 3881
+}

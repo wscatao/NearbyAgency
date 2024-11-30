@@ -1,0 +1,30 @@
+{
+  "id" : "b624ab14-f67a-49f1-be4c-55cc039db707",
+  "name" : "viacep.com.br_ws_01246904_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01246904/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01246-904\",\n  \"logradouro\": \"Avenida Doutor Arnaldo\",\n  \"complemento\": \"715\",\n  \"unidade\": \"Faculdade de Saúde Pública\",\n  \"bairro\": \"Pacaembu\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:32 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:32 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "b624ab14-f67a-49f1-be4c-55cc039db707",
+  "persistent" : true,
+  "scenarioName" : "scenario-399-viacep.com.br-ws-01246904-json",
+  "requiredScenarioState" : "scenario-399-viacep.com.br-ws-01246904-json-2",
+  "insertionIndex" : 1069
+}

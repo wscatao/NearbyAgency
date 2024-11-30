@@ -1,0 +1,30 @@
+{
+  "id" : "e71c7408-9f63-4989-a8b3-8e735747dd79",
+  "name" : "viacep.com.br_ws_01041901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01041901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01041-901\",\n  \"logradouro\": \"Rua Vinte e Quatro de Maio\",\n  \"complemento\": \"104\",\n  \"unidade\": \"Edifício Laudura\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:05 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:05 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "e71c7408-9f63-4989-a8b3-8e735747dd79",
+  "persistent" : true,
+  "scenarioName" : "scenario-1296-viacep.com.br-ws-01041901-json",
+  "requiredScenarioState" : "scenario-1296-viacep.com.br-ws-01041901-json-2",
+  "insertionIndex" : 2861
+}

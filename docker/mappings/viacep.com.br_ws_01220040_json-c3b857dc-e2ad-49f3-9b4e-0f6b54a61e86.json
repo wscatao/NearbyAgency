@@ -1,0 +1,30 @@
+{
+  "id" : "c3b857dc-e2ad-49f3-9b4e-0f6b54a61e86",
+  "name" : "viacep.com.br_ws_01220040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01220040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01220-040\",\n  \"logradouro\": \"Rua Doutor Teodoro Baima\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"República\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:03 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:03 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "c3b857dc-e2ad-49f3-9b4e-0f6b54a61e86",
+  "persistent" : true,
+  "scenarioName" : "scenario-698-viacep.com.br-ws-01220040-json",
+  "requiredScenarioState" : "scenario-698-viacep.com.br-ws-01220040-json-2",
+  "insertionIndex" : 1664
+}

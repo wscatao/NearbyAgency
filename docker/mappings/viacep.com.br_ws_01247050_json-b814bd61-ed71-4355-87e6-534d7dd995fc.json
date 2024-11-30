@@ -1,0 +1,31 @@
+{
+  "id" : "b814bd61-ed71-4355-87e6-534d7dd995fc",
+  "name" : "viacep.com.br_ws_01247050_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01247050/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01247-050\",\n  \"logradouro\": \"Rua Senador João Lira\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Pacaembu\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:32 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:32 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "b814bd61-ed71-4355-87e6-534d7dd995fc",
+  "persistent" : true,
+  "scenarioName" : "scenario-393-viacep.com.br-ws-01247050-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-393-viacep.com.br-ws-01247050-json-2",
+  "insertionIndex" : 1064
+}

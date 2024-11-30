@@ -1,0 +1,30 @@
+{
+  "id" : "f1404cde-d9f8-4c06-98f7-752b3c38b215",
+  "name" : "viacep.com.br_ws_01031030_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01031030/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01031-030\",\n  \"logradouro\": \"Praça do Correio\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:55 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:55 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "f1404cde-d9f8-4c06-98f7-752b3c38b215",
+  "persistent" : true,
+  "scenarioName" : "scenario-1395-viacep.com.br-ws-01031030-json",
+  "requiredScenarioState" : "scenario-1395-viacep.com.br-ws-01031030-json-2",
+  "insertionIndex" : 3064
+}

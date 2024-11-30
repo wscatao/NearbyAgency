@@ -1,0 +1,30 @@
+{
+  "id" : "02ea4cb2-8137-46af-8e4c-0f99a69e6f6b",
+  "name" : "viacep.com.br_ws_01141020_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01141020/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01141-020\",\n  \"logradouro\": \"Rua Quirino dos Santos\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Várzea da Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:42 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:42 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "02ea4cb2-8137-46af-8e4c-0f99a69e6f6b",
+  "persistent" : true,
+  "scenarioName" : "scenario-912-viacep.com.br-ws-01141020-json",
+  "requiredScenarioState" : "scenario-912-viacep.com.br-ws-01141020-json-2",
+  "insertionIndex" : 2093
+}

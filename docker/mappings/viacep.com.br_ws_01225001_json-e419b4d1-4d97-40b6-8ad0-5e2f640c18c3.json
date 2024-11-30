@@ -1,0 +1,31 @@
+{
+  "id" : "e419b4d1-4d97-40b6-8ad0-5e2f640c18c3",
+  "name" : "viacep.com.br_ws_01225001_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01225001/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01225-001\",\n  \"logradouro\": \"Rua Frederico Abranches\",\n  \"complemento\": \"lado ímpar\",\n  \"unidade\": \"\",\n  \"bairro\": \"Vila Buarque\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:08 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:08 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "e419b4d1-4d97-40b6-8ad0-5e2f640c18c3",
+  "persistent" : true,
+  "scenarioName" : "scenario-644-viacep.com.br-ws-01225001-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-644-viacep.com.br-ws-01225001-json-2",
+  "insertionIndex" : 1568
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "3fc07f61-663a-4345-90f7-db5e505c9edf",
+  "name" : "viacep.com.br_ws_01301911_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01301911/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01301-911\",\n  \"logradouro\": \"Rua da Consolação\",\n  \"complemento\": \"65\",\n  \"unidade\": \"Edifício Vicente Filizola\",\n  \"bairro\": \"Consolação\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:48 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:48 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "3fc07f61-663a-4345-90f7-db5e505c9edf",
+  "persistent" : true,
+  "scenarioName" : "scenario-226-viacep.com.br-ws-01301911-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-226-viacep.com.br-ws-01301911-json-2",
+  "insertionIndex" : 729
+}

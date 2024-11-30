@@ -1,0 +1,30 @@
+{
+  "id" : "7953d8a3-5d98-4479-9d8e-8e5a38f52bdf",
+  "name" : "viacep.com.br_ws_01315901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01315901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01315-901\",\n  \"logradouro\": \"Rua Jaceguai\",\n  \"complemento\": \"400\",\n  \"unidade\": \"Edifício Eran\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:09 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:09 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "7953d8a3-5d98-4479-9d8e-8e5a38f52bdf",
+  "persistent" : true,
+  "scenarioName" : "scenario-17-viacep.com.br-ws-01315901-json",
+  "requiredScenarioState" : "scenario-17-viacep.com.br-ws-01315901-json-2",
+  "insertionIndex" : 303
+}

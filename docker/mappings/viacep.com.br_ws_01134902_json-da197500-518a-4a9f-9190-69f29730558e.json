@@ -1,0 +1,30 @@
+{
+  "id" : "da197500-518a-4a9f-9190-69f29730558e",
+  "name" : "viacep.com.br_ws_01134902_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01134902/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01134-902\",\n  \"logradouro\": \"Avenida Rudge\",\n  \"complemento\": \"810\",\n  \"unidade\": \"Condomínio Conjunto Residencial Campos Elísios\",\n  \"bairro\": \"Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:35 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:35 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "da197500-518a-4a9f-9190-69f29730558e",
+  "persistent" : true,
+  "scenarioName" : "scenario-980-viacep.com.br-ws-01134902-json",
+  "requiredScenarioState" : "scenario-980-viacep.com.br-ws-01134902-json-2",
+  "insertionIndex" : 2233
+}

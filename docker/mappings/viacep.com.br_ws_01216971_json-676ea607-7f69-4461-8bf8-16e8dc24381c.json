@@ -1,0 +1,22 @@
+{
+  "id" : "676ea607-7f69-4461-8bf8-16e8dc24381c",
+  "name" : "viacep.com.br_ws_01216971_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01216971/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "<!DOCTYPE HTML>\n<html lang=\"pt-br\">\n\n<head>\n  <title>ViaCEP 404</title>\n  <meta charset=\"utf-8\" />\n  <style type=\"text/css\">\n      h1 {\n          color: #555;\n          text-align: center;\n          font-size: 4em;\n      }\n      h2, h3 {\n          color: #666;\n          text-align: center;\n          font-size: 3em;\n      }\n      h3 {\n          font-size: 1.5em;\n      }\n  </style>\n</head>\n\n<body>\n    <h1>Http 404</h1>\n    <h3>Página Não Encontrada</h3>\n    <h3>{Not Found}</h3>\n</body>\n\n</html>\n",
+    "headers" : {
+      "Strict-Transport-Security" : "max-age=63072000",
+      "Server" : "nginx/1.22.0",
+      "Vary" : "Accept-Encoding",
+      "Date" : "Sat, 30 Nov 2024 03:44:00 GMT",
+      "Content-Type" : "text/html; charset=utf-8"
+    }
+  },
+  "uuid" : "676ea607-7f69-4461-8bf8-16e8dc24381c",
+  "persistent" : true,
+  "insertionIndex" : 1730
+}

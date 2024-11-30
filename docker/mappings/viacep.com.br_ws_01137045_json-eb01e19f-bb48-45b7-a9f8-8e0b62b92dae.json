@@ -1,0 +1,30 @@
+{
+  "id" : "eb01e19f-bb48-45b7-a9f8-8e0b62b92dae",
+  "name" : "viacep.com.br_ws_01137045_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01137045/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01137-045\",\n  \"logradouro\": \"Praça Padre Luís Alves de Siqueira Castro\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:37 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:37 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "eb01e19f-bb48-45b7-a9f8-8e0b62b92dae",
+  "persistent" : true,
+  "scenarioName" : "scenario-959-viacep.com.br-ws-01137045-json",
+  "requiredScenarioState" : "scenario-959-viacep.com.br-ws-01137045-json-2",
+  "insertionIndex" : 2188
+}

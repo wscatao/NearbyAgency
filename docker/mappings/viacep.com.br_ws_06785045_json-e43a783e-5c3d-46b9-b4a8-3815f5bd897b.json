@@ -1,0 +1,31 @@
+{
+  "id" : "e43a783e-5c3d-46b9-b4a8-3815f5bd897b",
+  "name" : "viacep.com.br_ws_06785045_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06785045/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06785-045\",\n  \"logradouro\": \"Alameda João Floriano\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Scândia\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:23:00 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:23:00 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "e43a783e-5c3d-46b9-b4a8-3815f5bd897b",
+  "persistent" : true,
+  "scenarioName" : "scenario-62-viacep.com.br-ws-06785045-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-62-viacep.com.br-ws-06785045-json-2",
+  "insertionIndex" : 3511
+}

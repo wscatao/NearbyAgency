@@ -1,0 +1,30 @@
+{
+  "id" : "7aa41846-1f03-4633-a14b-1defc68d82c0",
+  "name" : "viacep.com.br_ws_06794110_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06794110/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06794-110\",\n  \"logradouro\": \"Alameda Urânia\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Condomínio Iolanda\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:34:06 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:34:06 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "7aa41846-1f03-4633-a14b-1defc68d82c0",
+  "persistent" : true,
+  "scenarioName" : "scenario-60-viacep.com.br-ws-06794110-json",
+  "requiredScenarioState" : "scenario-60-viacep.com.br-ws-06794110-json-2",
+  "insertionIndex" : 3990
+}

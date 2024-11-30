@@ -1,0 +1,31 @@
+{
+  "id" : "585f7ce1-6ede-48c9-9d96-4405dbb9c0c1",
+  "name" : "viacep.com.br_ws_01309906_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01309906/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01309-906\",\n  \"logradouro\": \"Rua Antônio Carlos\",\n  \"complemento\": \"582\",\n  \"unidade\": \"Edifício Antônio Carlos\",\n  \"bairro\": \"Consolação\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:58 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:58 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "585f7ce1-6ede-48c9-9d96-4405dbb9c0c1",
+  "persistent" : true,
+  "scenarioName" : "scenario-130-viacep.com.br-ws-01309906-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-130-viacep.com.br-ws-01309906-json-2",
+  "insertionIndex" : 536
+}

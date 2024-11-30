@@ -1,0 +1,31 @@
+{
+  "id" : "77ac0c4f-613d-4096-bb25-fb47eeb35b85",
+  "name" : "viacep.com.br_ws_01046910_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01046910/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01046-910\",\n  \"logradouro\": \"Avenida São Luís\",\n  \"complemento\": \"141\",\n  \"unidade\": \"Edifício Moreira Salles\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:12 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:12 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "77ac0c4f-613d-4096-bb25-fb47eeb35b85",
+  "persistent" : true,
+  "scenarioName" : "scenario-1221-viacep.com.br-ws-01046910-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1221-viacep.com.br-ws-01046910-json-2",
+  "insertionIndex" : 2720
+}

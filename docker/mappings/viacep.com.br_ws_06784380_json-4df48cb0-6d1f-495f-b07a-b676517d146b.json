@@ -1,0 +1,31 @@
+{
+  "id" : "4df48cb0-6d1f-495f-b07a-b676517d146b",
+  "name" : "viacep.com.br_ws_06784380_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06784380/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06784-380\",\n  \"logradouro\": \"Rua Fideralina Gomes de Almeida\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Freitas Júnior\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:21:28 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:21:28 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "4df48cb0-6d1f-495f-b07a-b676517d146b",
+  "persistent" : true,
+  "scenarioName" : "scenario-108-viacep.com.br-ws-06784380-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-108-viacep.com.br-ws-06784380-json-2",
+  "insertionIndex" : 3603
+}

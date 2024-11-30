@@ -1,0 +1,30 @@
+{
+  "id" : "429c951b-01c0-453a-8251-98c1fa478eea",
+  "name" : "viacep.com.br_ws_01311000_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01311000/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01311-000\",\n  \"logradouro\": \"Avenida Paulista\",\n  \"complemento\": \"até 609 - lado ímpar\",\n  \"unidade\": \"\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:02 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:02 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "429c951b-01c0-453a-8251-98c1fa478eea",
+  "persistent" : true,
+  "scenarioName" : "scenario-88-viacep.com.br-ws-01311000-json",
+  "requiredScenarioState" : "scenario-88-viacep.com.br-ws-01311000-json-2",
+  "insertionIndex" : 439
+}

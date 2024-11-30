@@ -1,0 +1,31 @@
+{
+  "id" : "90cd2a9e-62fd-4c57-a44d-2ea301ea86bc",
+  "name" : "viacep.com.br_ws_01034901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01034901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01034-901\",\n  \"logradouro\": \"Largo do Paissandu\",\n  \"complemento\": \"72\",\n  \"unidade\": \"Edifício José Paulino Nogueira\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:58 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:58 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "90cd2a9e-62fd-4c57-a44d-2ea301ea86bc",
+  "persistent" : true,
+  "scenarioName" : "scenario-1354-viacep.com.br-ws-01034901-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1354-viacep.com.br-ws-01034901-json-2",
+  "insertionIndex" : 2991
+}

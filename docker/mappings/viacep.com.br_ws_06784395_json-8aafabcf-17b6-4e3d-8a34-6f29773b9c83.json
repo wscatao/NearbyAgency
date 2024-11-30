@@ -1,0 +1,30 @@
+{
+  "id" : "8aafabcf-17b6-4e3d-8a34-6f29773b9c83",
+  "name" : "viacep.com.br_ws_06784395_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06784395/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06784-395\",\n  \"logradouro\": \"Rua Governador Leonel Brizola\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Record\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:21:41 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:21:41 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "8aafabcf-17b6-4e3d-8a34-6f29773b9c83",
+  "persistent" : true,
+  "scenarioName" : "scenario-102-viacep.com.br-ws-06784395-json",
+  "requiredScenarioState" : "scenario-102-viacep.com.br-ws-06784395-json-2",
+  "insertionIndex" : 3590
+}

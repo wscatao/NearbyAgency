@@ -1,0 +1,30 @@
+{
+  "id" : "d5397b05-2a85-44e1-aa04-52182c21b0b0",
+  "name" : "viacep.com.br_ws_01106090_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01106090/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01106-090\",\n  \"logradouro\": \"Rua Matilde Sá Barbosa\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Luz\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:23 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:23 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "d5397b05-2a85-44e1-aa04-52182c21b0b0",
+  "persistent" : true,
+  "scenarioName" : "scenario-1111-viacep.com.br-ws-01106090-json",
+  "requiredScenarioState" : "scenario-1111-viacep.com.br-ws-01106090-json-2",
+  "insertionIndex" : 2492
+}

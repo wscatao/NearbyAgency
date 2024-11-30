@@ -1,0 +1,30 @@
+{
+  "id" : "cfcaf459-bfa8-4a45-bf1e-d5c1cd68e82d",
+  "name" : "viacep.com.br_ws_01310935_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01310935/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01310-935\",\n  \"logradouro\": \"Avenida Paulista\",\n  \"complemento\": \"352\",\n  \"unidade\": \"América Travel Viagens e Turismo Ltda.\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:02 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:02 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "cfcaf459-bfa8-4a45-bf1e-d5c1cd68e82d",
+  "persistent" : true,
+  "scenarioName" : "scenario-93-viacep.com.br-ws-01310935-json",
+  "requiredScenarioState" : "scenario-93-viacep.com.br-ws-01310935-json-2",
+  "insertionIndex" : 452
+}

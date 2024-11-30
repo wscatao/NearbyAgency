@@ -1,0 +1,31 @@
+{
+  "id" : "60ccaa51-103d-484a-a877-c546962c1cbd",
+  "name" : "viacep.com.br_ws_01140151_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01140151/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01140-151\",\n  \"logradouro\": \"Rua Jornalista Aloysio Biondi\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Várzea da Barra Funda\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:41 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:41 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "60ccaa51-103d-484a-a877-c546962c1cbd",
+  "persistent" : true,
+  "scenarioName" : "scenario-917-viacep.com.br-ws-01140151-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-917-viacep.com.br-ws-01140151-json-2",
+  "insertionIndex" : 2115
+}

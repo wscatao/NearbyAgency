@@ -1,0 +1,30 @@
+{
+  "id" : "da5e9045-d692-4f39-ba32-5e53300343bc",
+  "name" : "viacep.com.br_ws_01120901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01120901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01120-901\",\n  \"logradouro\": \"Rua José Paulino\",\n  \"complemento\": \"671\",\n  \"unidade\": \"Galeria Antártica\",\n  \"bairro\": \"Bom Retiro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:26 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:26 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "da5e9045-d692-4f39-ba32-5e53300343bc",
+  "persistent" : true,
+  "scenarioName" : "scenario-1078-viacep.com.br-ws-01120901-json",
+  "requiredScenarioState" : "scenario-1078-viacep.com.br-ws-01120901-json-2",
+  "insertionIndex" : 2427
+}

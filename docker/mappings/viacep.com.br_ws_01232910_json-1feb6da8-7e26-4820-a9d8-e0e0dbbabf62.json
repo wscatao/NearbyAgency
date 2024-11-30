@@ -1,0 +1,31 @@
+{
+  "id" : "1feb6da8-7e26-4820-a9d8-e0e0dbbabf62",
+  "name" : "viacep.com.br_ws_01232910_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01232910/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01232-910\",\n  \"logradouro\": \"Rua Conselheiro Brotero\",\n  \"complemento\": \"1486\",\n  \"unidade\": \"Hospital Samaritano\",\n  \"bairro\": \"Santa Cecília\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:16 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:16 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "1feb6da8-7e26-4820-a9d8-e0e0dbbabf62",
+  "persistent" : true,
+  "scenarioName" : "scenario-561-viacep.com.br-ws-01232910-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-561-viacep.com.br-ws-01232910-json-2",
+  "insertionIndex" : 1399
+}

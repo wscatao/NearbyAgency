@@ -1,0 +1,31 @@
+{
+  "id" : "7328d832-5b65-469d-bf20-e127af614826",
+  "name" : "viacep.com.br_ws_06803135_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06803135/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06803-135\",\n  \"logradouro\": \"Avenida Elias Yazbek\",\n  \"complemento\": \"de 2048 a 2712 - lado par\",\n  \"unidade\": \"\",\n  \"bairro\": \"Embuema\",\n  \"localidade\": \"Embu das Artes\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3515004\",\n  \"gia\": \"2987\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6401\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:34:35 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:34:35 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "7328d832-5b65-469d-bf20-e127af614826",
+  "persistent" : true,
+  "scenarioName" : "scenario-31-viacep.com.br-ws-06803135-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-31-viacep.com.br-ws-06803135-json-2",
+  "insertionIndex" : 3933
+}

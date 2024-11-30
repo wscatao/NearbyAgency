@@ -1,0 +1,30 @@
+{
+  "id" : "3f99de23-667d-42f0-a8b8-190ef3fa7e5f",
+  "name" : "viacep.com.br_ws_06786460_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06786460/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06786-460\",\n  \"logradouro\": \"Rua Manoel Francisco da Silva\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim São Judas Tadeu\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:31:30 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:31:30 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "3f99de23-667d-42f0-a8b8-190ef3fa7e5f",
+  "persistent" : true,
+  "scenarioName" : "scenario-216-viacep.com.br-ws-06786460-json",
+  "requiredScenarioState" : "scenario-216-viacep.com.br-ws-06786460-json-2",
+  "insertionIndex" : 4302
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "a4c1c647-fc9f-4fd9-8155-4e21e43bc047",
+  "name" : "viacep.com.br_ws_01009999_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01009999/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01009-999\",\n  \"logradouro\": \"Rua Líbero Badaró\",\n  \"complemento\": \"595\",\n  \"unidade\": \"Serv Carta, Cartão e Envelope-Encomenda Resposta - AC Central de São Paulo\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:35:25 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:35:25 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "a4c1c647-fc9f-4fd9-8155-4e21e43bc047",
+  "persistent" : true,
+  "scenarioName" : "scenario-45-viacep.com.br-ws-01009999-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-45-viacep.com.br-ws-01009999-json-2",
+  "insertionIndex" : 90
+}

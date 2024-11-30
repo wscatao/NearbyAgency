@@ -1,0 +1,30 @@
+{
+  "id" : "b3c39d0a-e0ba-44cc-877a-7c31bb5580b5",
+  "name" : "viacep.com.br_ws_06784434_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06784434/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06784-434\",\n  \"logradouro\": \"Rua Moisés Laje Primo\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Vitória\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:22:05 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:22:05 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "b3c39d0a-e0ba-44cc-877a-7c31bb5580b5",
+  "persistent" : true,
+  "scenarioName" : "scenario-90-viacep.com.br-ws-06784434-json",
+  "requiredScenarioState" : "scenario-90-viacep.com.br-ws-06784434-json-2",
+  "insertionIndex" : 3566
+}

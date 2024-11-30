@@ -1,0 +1,30 @@
+{
+  "id" : "9736d3a2-6e02-4054-9234-0666ac72e9f7",
+  "name" : "viacep.com.br_ws_01041903_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01041903/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01041-903\",\n  \"logradouro\": \"Rua Vinte e Quatro de Maio\",\n  \"complemento\": \"188\",\n  \"unidade\": \"Conjunto Dom José\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:05 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:05 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "9736d3a2-6e02-4054-9234-0666ac72e9f7",
+  "persistent" : true,
+  "scenarioName" : "scenario-1295-viacep.com.br-ws-01041903-json",
+  "requiredScenarioState" : "scenario-1295-viacep.com.br-ws-01041903-json-2",
+  "insertionIndex" : 2860
+}

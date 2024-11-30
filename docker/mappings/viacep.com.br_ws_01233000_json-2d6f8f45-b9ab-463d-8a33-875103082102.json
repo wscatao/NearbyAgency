@@ -1,0 +1,30 @@
+{
+  "id" : "2d6f8f45-b9ab-463d-8a33-875103082102",
+  "name" : "viacep.com.br_ws_01233000_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01233000/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01233-000\",\n  \"logradouro\": \"Rua Tupi\",\n  \"complemento\": \"lado par\",\n  \"unidade\": \"\",\n  \"bairro\": \"Santa Cecília\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:16 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:16 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "2d6f8f45-b9ab-463d-8a33-875103082102",
+  "persistent" : true,
+  "scenarioName" : "scenario-560-viacep.com.br-ws-01233000-json",
+  "requiredScenarioState" : "scenario-560-viacep.com.br-ws-01233000-json-2",
+  "insertionIndex" : 1390
+}

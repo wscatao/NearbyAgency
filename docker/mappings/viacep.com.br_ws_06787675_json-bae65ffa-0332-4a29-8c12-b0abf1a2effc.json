@@ -1,0 +1,30 @@
+{
+  "id" : "bae65ffa-0332-4a29-8c12-b0abf1a2effc",
+  "name" : "viacep.com.br_ws_06787675_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06787675/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06787-675\",\n  \"logradouro\": \"Rua José Augusto Domingos\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Saint Moritz\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:33:15 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:33:15 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "bae65ffa-0332-4a29-8c12-b0abf1a2effc",
+  "persistent" : true,
+  "scenarioName" : "scenario-111-viacep.com.br-ws-06787675-json",
+  "requiredScenarioState" : "scenario-111-viacep.com.br-ws-06787675-json-2",
+  "insertionIndex" : 4092
+}

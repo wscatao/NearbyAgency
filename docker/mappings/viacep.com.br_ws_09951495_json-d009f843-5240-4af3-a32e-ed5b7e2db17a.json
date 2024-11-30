@@ -1,0 +1,30 @@
+{
+  "id" : "d009f843-5240-4af3-a32e-ed5b7e2db17a",
+  "name" : "viacep.com.br_ws_09951495_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/09951495/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"09951-495\",\n  \"logradouro\": \"Rua Raio de Sol\",\n  \"complemento\": \"(Por do Sol)\",\n  \"unidade\": \"\",\n  \"bairro\": \"Piraporinha\",\n  \"localidade\": \"Diadema\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3513801\",\n  \"gia\": \"2860\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6377\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:40:01 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:40:01 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "d009f843-5240-4af3-a32e-ed5b7e2db17a",
+  "persistent" : true,
+  "scenarioName" : "scenario-53-viacep.com.br-ws-09951495-json",
+  "requiredScenarioState" : "scenario-53-viacep.com.br-ws-09951495-json-2",
+  "insertionIndex" : 4424
+}

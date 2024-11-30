@@ -1,0 +1,31 @@
+{
+  "id" : "a7d7bdc2-4c41-40a0-a7c8-7ee15b7db512",
+  "name" : "viacep.com.br_ws_01140065_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01140065/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01140-065\",\n  \"logradouro\": \"Ponte Júlio de Mesquita Neto\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Parque Industrial Tomas Edson\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:40 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:40 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "a7d7bdc2-4c41-40a0-a7c8-7ee15b7db512",
+  "persistent" : true,
+  "scenarioName" : "scenario-927-viacep.com.br-ws-01140065-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-927-viacep.com.br-ws-01140065-json-2",
+  "insertionIndex" : 2132
+}

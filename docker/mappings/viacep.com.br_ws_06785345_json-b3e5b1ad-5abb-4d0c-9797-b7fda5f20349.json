@@ -1,0 +1,30 @@
+{
+  "id" : "b3e5b1ad-5abb-4d0c-9797-b7fda5f20349",
+  "name" : "viacep.com.br_ws_06785345_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06785345/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06785-345\",\n  \"logradouro\": \"Rua João Floriano\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim São João\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:24:05 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:24:05 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "b3e5b1ad-5abb-4d0c-9797-b7fda5f20349",
+  "persistent" : true,
+  "scenarioName" : "scenario-30-viacep.com.br-ws-06785345-json",
+  "requiredScenarioState" : "scenario-30-viacep.com.br-ws-06785345-json-2",
+  "insertionIndex" : 3446
+}

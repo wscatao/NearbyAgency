@@ -1,0 +1,30 @@
+{
+  "id" : "bbd34d0e-0a6d-4715-89c6-981c1cb6e46b",
+  "name" : "viacep.com.br_ws_01007906_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01007906/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01007-906\",\n  \"logradouro\": \"Rua Riachuelo\",\n  \"complemento\": \"231\",\n  \"unidade\": \"Edifício Central Riachuelo\",\n  \"bairro\": \"Sé\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:34:33 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:34:33 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "bbd34d0e-0a6d-4715-89c6-981c1cb6e46b",
+  "persistent" : true,
+  "scenarioName" : "scenario-64-viacep.com.br-ws-01007906-json",
+  "requiredScenarioState" : "scenario-64-viacep.com.br-ws-01007906-json-2",
+  "insertionIndex" : 127
+}

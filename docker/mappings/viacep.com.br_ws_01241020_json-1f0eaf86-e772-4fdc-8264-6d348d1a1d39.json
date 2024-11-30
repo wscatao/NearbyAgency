@@ -1,0 +1,30 @@
+{
+  "id" : "1f0eaf86-e772-4fdc-8264-6d348d1a1d39",
+  "name" : "viacep.com.br_ws_01241020_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01241020/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01241-020\",\n  \"logradouro\": \"Rua Barão de Bocaina\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Higienópolis\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:25 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:25 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "1f0eaf86-e772-4fdc-8264-6d348d1a1d39",
+  "persistent" : true,
+  "scenarioName" : "scenario-472-viacep.com.br-ws-01241020-json",
+  "requiredScenarioState" : "scenario-472-viacep.com.br-ws-01241020-json-2",
+  "insertionIndex" : 1214
+}

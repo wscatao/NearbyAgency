@@ -1,0 +1,31 @@
+{
+  "id" : "47e8da5c-9ece-47bd-9049-ebf3a9bb5e92",
+  "name" : "viacep.com.br_ws_01221900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01221900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01221-900\",\n  \"logradouro\": \"Rua Doutor Cesário Mota Júnior\",\n  \"complemento\": \"112\",\n  \"unidade\": \"Irmandade de Santa Casa de Misericórdia\",\n  \"bairro\": \"Santa Cecília\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:04 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:04 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "47e8da5c-9ece-47bd-9049-ebf3a9bb5e92",
+  "persistent" : true,
+  "scenarioName" : "scenario-682-viacep.com.br-ws-01221900-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-682-viacep.com.br-ws-01221900-json-2",
+  "insertionIndex" : 1641
+}

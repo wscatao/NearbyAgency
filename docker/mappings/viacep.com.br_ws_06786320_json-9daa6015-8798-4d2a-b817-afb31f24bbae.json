@@ -1,0 +1,31 @@
+{
+  "id" : "9daa6015-8798-4d2a-b817-afb31f24bbae",
+  "name" : "viacep.com.br_ws_06786320_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06786320/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06786-320\",\n  \"logradouro\": \"Rua Ronaldo Jesus Lentisco\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Elizabete\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:29:13 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:29:13 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "9daa6015-8798-4d2a-b817-afb31f24bbae",
+  "persistent" : true,
+  "scenarioName" : "scenario-11-viacep.com.br-ws-06786320-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-11-viacep.com.br-ws-06786320-json-2",
+  "insertionIndex" : 3816
+}

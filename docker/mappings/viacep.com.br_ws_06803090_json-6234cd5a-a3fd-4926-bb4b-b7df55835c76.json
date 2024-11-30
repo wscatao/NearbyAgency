@@ -1,0 +1,31 @@
+{
+  "id" : "6234cd5a-a3fd-4926-bb4b-b7df55835c76",
+  "name" : "viacep.com.br_ws_06803090_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06803090/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06803-090\",\n  \"logradouro\": \"Rua Dalva de Oliveira\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Embuema\",\n  \"localidade\": \"Embu das Artes\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3515004\",\n  \"gia\": \"2987\",\n  \"ddd\": \"11\",\n  \"siafi\": \"6401\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:34:30 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:34:30 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "6234cd5a-a3fd-4926-bb4b-b7df55835c76",
+  "persistent" : true,
+  "scenarioName" : "scenario-36-viacep.com.br-ws-06803090-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-36-viacep.com.br-ws-06803090-json-2",
+  "insertionIndex" : 3943
+}

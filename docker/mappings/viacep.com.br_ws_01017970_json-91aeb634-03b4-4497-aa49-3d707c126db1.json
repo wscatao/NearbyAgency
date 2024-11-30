@@ -1,0 +1,30 @@
+{
+  "id" : "91aeb634-03b4-4497-aa49-3d707c126db1",
+  "name" : "viacep.com.br_ws_01017970_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01017970/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01017-970\",\n  \"logradouro\": \"Avenida Rangel Pestana\",\n  \"complemento\": \"300 Térreo .\",\n  \"unidade\": \"AC Secretaria da Fazenda\",\n  \"bairro\": \"Brás\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:45 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:45 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "91aeb634-03b4-4497-aa49-3d707c126db1",
+  "persistent" : true,
+  "scenarioName" : "scenario-1497-viacep.com.br-ws-01017970-json",
+  "requiredScenarioState" : "scenario-1497-viacep.com.br-ws-01017970-json-2",
+  "insertionIndex" : 3270
+}

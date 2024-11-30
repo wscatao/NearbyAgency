@@ -1,0 +1,30 @@
+{
+  "id" : "058f5d1c-3428-44d0-829a-9ab0dae52c50",
+  "name" : "viacep.com.br_ws_01219903_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01219903/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01219-903\",\n  \"logradouro\": \"Largo do Arouche\",\n  \"complemento\": \"150\",\n  \"unidade\": \"San Rafael Hotel\",\n  \"bairro\": \"República\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:44:02 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:44:02 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "058f5d1c-3428-44d0-829a-9ab0dae52c50",
+  "persistent" : true,
+  "scenarioName" : "scenario-707-viacep.com.br-ws-01219903-json",
+  "requiredScenarioState" : "scenario-707-viacep.com.br-ws-01219903-json-2",
+  "insertionIndex" : 1681
+}

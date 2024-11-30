@@ -1,0 +1,30 @@
+{
+  "id" : "8a2c6d83-4954-4d93-a0b3-c2fc29edc2c4",
+  "name" : "viacep.com.br_ws_01311928_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01311928/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01311-928\",\n  \"logradouro\": \"Avenida Paulista\",\n  \"complemento\": \"1499\",\n  \"unidade\": \"Edifício Conde Andréa Matarazzo\",\n  \"bairro\": \"Bela Vista\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:45:05 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:45:05 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "8a2c6d83-4954-4d93-a0b3-c2fc29edc2c4",
+  "persistent" : true,
+  "scenarioName" : "scenario-57-viacep.com.br-ws-01311928-json",
+  "requiredScenarioState" : "scenario-57-viacep.com.br-ws-01311928-json-2",
+  "insertionIndex" : 383
+}

@@ -1,0 +1,30 @@
+{
+  "id" : "ce339f35-8aad-4c8f-9151-01ebc30fca0a",
+  "name" : "viacep.com.br_ws_01017040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01017040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01017-040\",\n  \"logradouro\": \"Viaduto Vinte e Cinco de Março\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Sé\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:44 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:44 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "ce339f35-8aad-4c8f-9151-01ebc30fca0a",
+  "persistent" : true,
+  "scenarioName" : "scenario-1508-viacep.com.br-ws-01017040-json",
+  "requiredScenarioState" : "scenario-1508-viacep.com.br-ws-01017040-json-2",
+  "insertionIndex" : 3289
+}

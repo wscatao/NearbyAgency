@@ -1,0 +1,30 @@
+{
+  "id" : "2c3caeb1-e5d4-4732-a725-4d60b6f30c8d",
+  "name" : "viacep.com.br_ws_01002901_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01002901/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01002-901\",\n  \"logradouro\": \"Rua Direita\",\n  \"complemento\": \"32\",\n  \"unidade\": \"Edifício Piratininga\",\n  \"bairro\": \"Sé\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:32:21 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:32:21 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "2c3caeb1-e5d4-4732-a725-4d60b6f30c8d",
+  "persistent" : true,
+  "scenarioName" : "scenario-110-viacep.com.br-ws-01002901-json",
+  "requiredScenarioState" : "scenario-110-viacep.com.br-ws-01002901-json-2",
+  "insertionIndex" : 219
+}

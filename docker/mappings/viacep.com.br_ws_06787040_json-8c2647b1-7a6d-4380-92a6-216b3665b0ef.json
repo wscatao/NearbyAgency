@@ -1,0 +1,30 @@
+{
+  "id" : "8c2647b1-7a6d-4380-92a6-216b3665b0ef",
+  "name" : "viacep.com.br_ws_06787040_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/06787040/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"06787-040\",\n  \"logradouro\": \"Rua Francisco Salatino\",\n  \"complemento\": \"\",\n  \"unidade\": \"\",\n  \"bairro\": \"Jardim Maria Helena\",\n  \"localidade\": \"Taboão da Serra\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3552809\",\n  \"gia\": \"6750\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7157\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 05:31:53 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 04:31:53 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "8c2647b1-7a6d-4380-92a6-216b3665b0ef",
+  "persistent" : true,
+  "scenarioName" : "scenario-194-viacep.com.br-ws-06787040-json",
+  "requiredScenarioState" : "scenario-194-viacep.com.br-ws-06787040-json-2",
+  "insertionIndex" : 4258
+}

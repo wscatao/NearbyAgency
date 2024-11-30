@@ -1,0 +1,31 @@
+{
+  "id" : "1148f3f3-8e70-42d6-9050-d20f57ef1b5b",
+  "name" : "viacep.com.br_ws_01023905_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01023905/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01023-905\",\n  \"logradouro\": \"Rua Comendador Abdo Schahin\",\n  \"complemento\": \"62\",\n  \"unidade\": \"Edifício Antônio Zogbi\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:42:50 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:42:50 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "1148f3f3-8e70-42d6-9050-d20f57ef1b5b",
+  "persistent" : true,
+  "scenarioName" : "scenario-1444-viacep.com.br-ws-01023905-json",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1444-viacep.com.br-ws-01023905-json-2",
+  "insertionIndex" : 3171
+}

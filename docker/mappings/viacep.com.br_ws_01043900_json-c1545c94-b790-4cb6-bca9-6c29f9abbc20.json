@@ -1,0 +1,30 @@
+{
+  "id" : "c1545c94-b790-4cb6-bca9-6c29f9abbc20",
+  "name" : "viacep.com.br_ws_01043900_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01043900/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01043-900\",\n  \"logradouro\": \"Rua Sete de Abril\",\n  \"complemento\": \"59\",\n  \"unidade\": \"Edifício Cocip\",\n  \"bairro\": \"Centro\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:07 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:07 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "c1545c94-b790-4cb6-bca9-6c29f9abbc20",
+  "persistent" : true,
+  "scenarioName" : "scenario-1267-viacep.com.br-ws-01043900-json",
+  "requiredScenarioState" : "scenario-1267-viacep.com.br-ws-01043900-json-2",
+  "insertionIndex" : 2808
+}

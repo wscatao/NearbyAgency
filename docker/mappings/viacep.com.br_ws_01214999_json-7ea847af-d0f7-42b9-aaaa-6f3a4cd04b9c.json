@@ -1,0 +1,30 @@
+{
+  "id" : "7ea847af-d0f7-42b9-aaaa-6f3a4cd04b9c",
+  "name" : "viacep.com.br_ws_01214999_json",
+  "request" : {
+    "url" : "/viacep.com.br/ws/01214999/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\n  \"cep\": \"01214-999\",\n  \"logradouro\": \"Avenida Duque de Caxias\",\n  \"complemento\": \"84\",\n  \"unidade\": \"Serv Carta, Cartão e Envelope-Encomenda Resposta - AC Av. Duque de Caxias\",\n  \"bairro\": \"Santa Efigênia\",\n  \"localidade\": \"São Paulo\",\n  \"uf\": \"SP\",\n  \"estado\": \"São Paulo\",\n  \"regiao\": \"Sudeste\",\n  \"ibge\": \"3550308\",\n  \"gia\": \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}",
+    "headers" : {
+      "Cache-Control" : [ "max-age=3600", "public" ],
+      "Server" : "nginx/1.22.0",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET",
+      "Pragma" : "public",
+      "Expires" : "Sat, 30 Nov 2024 04:43:59 GMT",
+      "Access-Control-Max-Age" : "86400",
+      "Access-Control-Allow-Headers" : "Content-Type, X-Request-With, X-Requested-By",
+      "Date" : "Sat, 30 Nov 2024 03:43:59 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "7ea847af-d0f7-42b9-aaaa-6f3a4cd04b9c",
+  "persistent" : true,
+  "scenarioName" : "scenario-736-viacep.com.br-ws-01214999-json",
+  "requiredScenarioState" : "scenario-736-viacep.com.br-ws-01214999-json-2",
+  "insertionIndex" : 1742
+}
