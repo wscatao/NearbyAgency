@@ -1,11 +1,16 @@
 package br.com.santander.nearagencyapi.interfaces.exceptions;
 
 import br.com.santander.nearagencyapi.domain.exception.NearAgencyException;
+import br.com.santander.nearagencyapi.interfaces.exceptions.dto.InvalidParamDto;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.ProblemDetail;
-import org.springframework.validation.method.MethodValidationException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.util.Set;
+import java.util.stream.Stream;
 
 @RestControllerAdvice
 public class ControllersExceptionHandlers {
@@ -32,11 +37,20 @@ public class ControllersExceptionHandlers {
         return problemDetail;
     }
 
-    @ExceptionHandler(MethodValidationException.class)
-    public ProblemDetail handleMethodValidationException(MethodValidationException ex) {
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ProblemDetail handleConstraintViolationException(ConstraintViolationException ex) {
         ProblemDetail problemDetail = ProblemDetail.forStatus(400);
-        problemDetail.setTitle("Invalid request parameters");
-        problemDetail.setDetail("There is invalid fields on the request");
+
+        Set<ConstraintViolation<?>> constraintViolations = ex.getConstraintViolations();
+        var invalidParams = constraintViolations.stream().map(constraintViolation -> {
+            return new InvalidParamDto(constraintViolation.getPropertyPath().toString(),
+                    constraintViolation.getMessageTemplate(),
+                    constraintViolation.getInvalidValue().toString());
+        });
+
+        problemDetail.setTitle("Validation error");
+        problemDetail.setDetail("One or more parameters are invalid");
+        problemDetail.setProperty("invalid-parameters", invalidParams);
         return problemDetail;
     }
 }
