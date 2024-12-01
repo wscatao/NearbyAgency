@@ -1,6 +1,7 @@
 package br.com.santander.nearagencyapi.infrastructure.adapters.restclient;
 
 import br.com.santander.nearagencyapi.domain.Address;
+import br.com.santander.nearagencyapi.domain.exception.ViaCepGetAddressException;
 import br.com.santander.nearagencyapi.domain.gateway.ZipCodeClientGateway;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
@@ -17,10 +18,13 @@ public class ZipCodeClient implements ZipCodeClientGateway {
     @Override
     public Address getAddress(String zipcode) {
 
-
-        return restClient.get()
-                .uri("ws/{zipcode}/json/", zipcode)
-                .retrieve()
-                .body(Address.class);
+        try {
+            return restClient.get()
+                    .uri("ws/{zipcode}/json/", zipcode)
+                    .retrieve()
+                    .body(Address.class);
+        } catch (Exception e) {
+            throw new ViaCepGetAddressException("Error fetching address for zipcode: " + zipcode);
+        }
     }
 }
