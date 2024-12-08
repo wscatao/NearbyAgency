@@ -1,14 +1,18 @@
 package br.com.santander.nearagencyapi.interfaces.dto;
 
-import java.util.UUID;
+import lombok.Getter;
+import lombok.Setter;
 
-public class AgencyDTO {
+import java.util.List;
 
-    private UUID id;
+@Getter
+@Setter
+public class AgencyDto {
+    private String agencyZipCode;
     private String agencyNumber;
     private String agencyName;
-    private String address;
-    private String zipCode;
-
-
+    private String agencyTelephone;
+    private String agencyEmail;
+    private String agencyAddress;
+    private List<String> services;
 }

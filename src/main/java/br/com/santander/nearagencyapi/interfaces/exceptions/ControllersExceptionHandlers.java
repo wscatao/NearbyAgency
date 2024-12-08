@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.Set;
-import java.util.stream.Stream;
 
 @RestControllerAdvice
 public class ControllersExceptionHandlers {
@@ -42,11 +41,11 @@ public class ControllersExceptionHandlers {
         ProblemDetail problemDetail = ProblemDetail.forStatus(400);
 
         Set<ConstraintViolation<?>> constraintViolations = ex.getConstraintViolations();
-        var invalidParams = constraintViolations.stream().map(constraintViolation -> {
-            return new InvalidParamDto(constraintViolation.getPropertyPath().toString(),
-                    constraintViolation.getMessageTemplate(),
-                    constraintViolation.getInvalidValue().toString());
-        });
+        var invalidParams = constraintViolations.stream().map(constraintViolation ->
+                new InvalidParamDto(constraintViolation.getPropertyPath().toString(),
+                        constraintViolation.getMessageTemplate(),
+                        constraintViolation.getInvalidValue().toString()));
+
 
         problemDetail.setTitle("Validation error");
         problemDetail.setDetail("One or more parameters are invalid");
