@@ -3,15 +3,15 @@ package br.com.santander.nearagencyapi.infrastructure.adapters.restclient;
 import br.com.santander.nearagencyapi.domain.Address;
 import br.com.santander.nearagencyapi.domain.exception.ViaCepGetAddressException;
 import br.com.santander.nearagencyapi.domain.gateway.ZipCodeClientGateway;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-@Component
-public class ZipCodeClient implements ZipCodeClientGateway {
+@Service
+public class ZipCodeClientImpl implements ZipCodeClientGateway {
 
     private final RestClient restClient;
 
-    public ZipCodeClient(RestClient restClient) {
+    public ZipCodeClientImpl(RestClient restClient) {
         this.restClient = restClient;
     }
 
