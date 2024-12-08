@@ -3,11 +3,29 @@ version: "3"
 
 services:
   wiremock:
-    image: "wiremock/wiremock:latest"
     container_name: via_cep_mock
+    image: "wiremock/wiremock:latest"
     volumes:
       - ./__files:/home/wiremock/__files
       - ./mappings:/home/wiremock/mappings
     ports:
       - 8081:8080
     entrypoint: ["/docker-entrypoint.sh", "--verbose"]
+
+  localstack:
+    container_name: "localstack"
+    image: localstack/localstack
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+    environment:
+      # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
+      - DEBUG=1
+      - PERSISTENCE=1
+      - SERVICES=dynamodb
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_SECRET_ACCESS_KEY=test
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
