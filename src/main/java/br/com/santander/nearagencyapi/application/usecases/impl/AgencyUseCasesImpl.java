@@ -4,11 +4,14 @@ import br.com.santander.nearagencyapi.application.services.GeoCodingService;
 import br.com.santander.nearagencyapi.application.services.GeoHashService;
 import br.com.santander.nearagencyapi.application.usecases.AgencyUseCases;
 import br.com.santander.nearagencyapi.domain.Agency;
+import br.com.santander.nearagencyapi.domain.exception.AgencyNotFoundException;
+import br.com.santander.nearagencyapi.domain.exception.GeoCodingException;
 import br.com.santander.nearagencyapi.domain.gateway.AgencyGateway;
 import com.google.maps.model.GeocodingResult;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 @Service
 public class AgencyUseCasesImpl implements AgencyUseCases {
@@ -37,9 +40,18 @@ public class AgencyUseCasesImpl implements AgencyUseCases {
             });
 
             agencyGateway.save(agency);
-
         } catch (Exception exception) {
-            throw new RuntimeException("Erro ao salvar agência", exception);
+            throw new GeoCodingException("Error getting geocoding data");
+        }
+    }
+
+    @Override
+    public Agency getAgencyByCepAndNumber(String zipCode, String agencyNumber) {
+        Optional<Agency> agency = agencyGateway.findByCepAndNumber(zipCode, agencyNumber);
+        if (agency.isEmpty()) {
+            throw new AgencyNotFoundException("Agency not found or does not exist");
+        } else {
+            return agency.get();
         }
     }
 }

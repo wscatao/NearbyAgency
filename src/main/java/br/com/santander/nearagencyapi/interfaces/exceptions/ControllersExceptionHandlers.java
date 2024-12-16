@@ -5,6 +5,7 @@ import br.com.santander.nearagencyapi.interfaces.exceptions.dto.InvalidParamDto;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.ProblemDetail;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -46,6 +47,21 @@ public class ControllersExceptionHandlers {
                         constraintViolation.getMessageTemplate(),
                         constraintViolation.getInvalidValue().toString()));
 
+
+        problemDetail.setTitle("Validation error");
+        problemDetail.setDetail("One or more parameters are invalid");
+        problemDetail.setProperty("invalid-parameters", invalidParams);
+        return problemDetail;
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ProblemDetail handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
+        ProblemDetail problemDetail = ProblemDetail.forStatus(400);
+
+        var invalidParams = ex.getBindingResult().getFieldErrors().stream().map(fieldError ->
+                new InvalidParamDto(fieldError.getField(),
+                        fieldError.getDefaultMessage(),
+                        fieldError.getRejectedValue().toString()));
 
         problemDetail.setTitle("Validation error");
         problemDetail.setDetail("One or more parameters are invalid");

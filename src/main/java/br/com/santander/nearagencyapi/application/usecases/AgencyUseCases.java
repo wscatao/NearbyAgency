@@ -7,4 +7,5 @@ import java.io.IOException;
 
 public interface AgencyUseCases {
     void createAgency(Agency agency) throws IOException, InterruptedException, ApiException;
+    Agency getAgencyByCepAndNumber(String zipCode, String agencyNumber);
 }

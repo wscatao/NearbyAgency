@@ -5,6 +5,9 @@ import br.com.santander.nearagencyapi.domain.gateway.AgencyGateway;
 import br.com.santander.nearagencyapi.infrastructure.model.AgencyModel;
 import io.awspring.cloud.dynamodb.DynamoDbTemplate;
 import org.springframework.stereotype.Service;
+import software.amazon.awssdk.enhanced.dynamodb.Key;
+
+import java.util.Optional;
 
 @Service
 public class AgencyPersistenceAdapterImpl implements AgencyGateway {
@@ -30,5 +33,35 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
         agencyModel.setLatitude(agency.getLatitude());
         agencyModel.setLongitude(agency.getLongitude());
         dynamoDbTemplate.save(agencyModel);
+    }
+
+    @Override
+    public Optional<Agency> findByCepAndNumber(String zipCode, String agencyNumber) {
+
+        Key key = Key.builder()
+                .partitionValue(zipCode)
+                .sortValue(agencyNumber)
+                .build();
+
+        AgencyModel agencyModel = dynamoDbTemplate.load(key, AgencyModel.class);
+
+        if (agencyModel == null) {
+            return Optional.empty();
+        }
+
+        Agency agency = new Agency();
+        agency.setAgencyZipCode(agencyModel.getAgencyZipCode());
+        agency.setAgencyNumber(agencyModel.getAgencyNumber());
+        agency.setAgencyName(agencyModel.getAgencyName());
+        agency.setAgencyTelephone(agencyModel.getAgencyTelephone());
+        agency.setAgencyEmail(agencyModel.getAgencyEmail());
+        agency.setAgencyAddress(agencyModel.getAgencyAddress());
+        agency.setServices(agencyModel.getServices());
+        agency.setFormattedAddress(agencyModel.getFormattedAddress());
+        agency.setGeoHash(agencyModel.getGeoHash());
+        agency.setLatitude(agencyModel.getLatitude());
+        agency.setLongitude(agencyModel.getLongitude());
+
+        return Optional.of(agency);
     }
 }
