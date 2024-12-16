@@ -1,5 +1,5 @@
 #!/bin/bash
 
 aws dynamodb delete-table \
-    --table-name cadastro_agencia \
+    --table-name agency_registration \
     --endpoint-url http://localhost:4566
