@@ -12,7 +12,7 @@ public class CustomTableNameResolver implements DynamoDbTableNameResolver {
 
         // Retorne o nome da tabela desejado
         if (domainClass.equals(AgencyModel.class)) {
-            return "AgencyRegistration";
+            return "agency_registration";
         }
         // Adicione outras resoluções de nome de tabela conforme necessário
         return domainClass.getSimpleName().toLowerCase();
