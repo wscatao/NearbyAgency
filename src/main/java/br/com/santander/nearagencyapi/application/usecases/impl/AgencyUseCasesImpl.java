@@ -61,6 +61,12 @@ public class AgencyUseCasesImpl implements AgencyUseCases {
         agencyGateway.update(agency);
     }
 
+    @Override
+    public void deleteAgency(Agency agency) {
+        ensureAgencyExists(agency);
+        agencyGateway.delete(agency);
+    }
+
     private void ensureAgencyExists(Agency agency) {
         Optional<Agency> optionalAgency = agencyGateway.findByCepAndNumber(agency.getAgencyZipCode(), agency.getAgencyNumber());
         if (optionalAgency.isEmpty()) {

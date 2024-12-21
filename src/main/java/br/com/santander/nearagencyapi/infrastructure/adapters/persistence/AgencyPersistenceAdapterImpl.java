@@ -78,7 +78,7 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
 
         AgencyModel agencyModel = dynamoDbTemplate.load(key, AgencyModel.class);
 
-        if(agencyModel != null) {
+        if (agencyModel != null) {
             agencyModel.setAgencyName(agency.getAgencyName());
             agencyModel.setAgencyTelephone(agency.getAgencyTelephone());
             agencyModel.setAgencyEmail(agency.getAgencyEmail());
@@ -89,6 +89,25 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
                 dynamoDbTemplate.update(agencyModel);
             } catch (ConditionalCheckFailedException e) {
                 throw new OptimisticLockingException("Version mismatch - update failed");
+            }
+        }
+    }
+
+    @Override
+    public void delete(Agency agency) {
+
+        Key key = Key.builder()
+                .partitionValue(agency.getAgencyZipCode())
+                .sortValue(agency.getAgencyNumber())
+                .build();
+
+        AgencyModel agencyModel = dynamoDbTemplate.load(key, AgencyModel.class);
+
+        if (agencyModel != null) {
+            try {
+                dynamoDbTemplate.delete(agencyModel);
+            } catch (ConditionalCheckFailedException e) {
+                throw new OptimisticLockingException("Version mismatch - delete failed");
             }
         }
     }

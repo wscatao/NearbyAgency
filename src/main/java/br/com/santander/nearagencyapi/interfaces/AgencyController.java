@@ -9,6 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -98,8 +99,19 @@ public class AgencyController {
         return ResponseEntity.ok().build();
     }
 
-//    @DeleteMapping("/agencies/{id}")
-//    public ResponseEntity<Void> deleteAgency() {
-//        return ResponseEntity.ok().build();
-//    }
+    @DeleteMapping("{zip-code}/{agency-number}")
+    public ResponseEntity<Void> deleteAgency(
+            @PathVariable(value = "zip-code")
+            @NotBlank(message = "zip code is required")
+            @Pattern(regexp = "^\\d{8}$", message = "zip code must have 8 digits")
+            String zipCode,
+            @PathVariable(value = "agency-number")
+            @NotBlank(message = "agency number is required")
+            @Pattern(regexp = "^\\d{4}$", message = "agency number must have 4 digits")
+            String agencyNumber) {
+
+        Agency agency = Agency.toAgency(zipCode, agencyNumber);
+        agencyUseCases.deleteAgency(agency);
+        return ResponseEntity.noContent().build();
+    }
 }

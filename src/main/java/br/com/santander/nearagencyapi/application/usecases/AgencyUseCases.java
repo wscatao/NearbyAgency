@@ -9,4 +9,5 @@ public interface AgencyUseCases {
     void createAgency(Agency agency) throws IOException, InterruptedException, ApiException;
     Agency getAgencyByCepAndNumber(String zipCode, String agencyNumber);
     void updateAgency(Agency agency);
+    void deleteAgency(Agency agency);
 }

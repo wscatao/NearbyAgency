@@ -46,4 +46,11 @@ public class Agency {
         agency.setVersion(Long.parseLong(ifMatch.replace("\"", "")));
         return agency;
     }
+
+    public static Agency toAgency(String agencyZipCode, String agencyNumber) {
+        var agency = new Agency();
+        agency.setAgencyZipCode(agencyZipCode);
+        agency.setAgencyNumber(agencyNumber);
+        return agency;
+    }
 }
