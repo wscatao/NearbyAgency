@@ -1,8 +1,12 @@
 package br.com.santander.nearagencyapi.interfaces;
 
 import br.com.santander.nearagencyapi.application.usecases.AgencyUseCases;
+import br.com.santander.nearagencyapi.domain.Agency;
+import br.com.santander.nearagencyapi.domain.exception.AgencyNotFoundException;
 import br.com.santander.nearagencyapi.factory.AgencyFactory;
+import br.com.santander.nearagencyapi.infrastructure.adapters.exception.OptimisticLockingException;
 import br.com.santander.nearagencyapi.interfaces.dto.AgencyDto;
+import br.com.santander.nearagencyapi.interfaces.dto.UpdateAgencyDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -17,7 +21,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(AgencyController.class)
@@ -63,6 +67,7 @@ class AgencyControllerTest {
                             .content(objectMapper.writeValueAsString(agencyDto)))
                     .andExpect(status().isBadRequest());
         }
+
         @Test
         void createAgencyWithInvalidZipCode() throws Exception {
             agencyDto = AgencyFactory.createWithInvalidZipCode();
@@ -161,6 +166,111 @@ class AgencyControllerTest {
                     .andExpect(jsonPath("$.status").value(400))
                     .andExpect(jsonPath("$.detail").value("One or more parameters are invalid"))
                     .andExpect(jsonPath("$.instance").value("/agencies"));
+        }
+    }
+
+    @Nested
+    class GetAgencyByCepAndNumberTests {
+
+        @Test
+        void getAgencyByCepAndNumber() throws Exception {
+            Agency agency = AgencyFactory.createDefaultAgency();
+            Mockito.when(agencyUseCases.getAgencyByCepAndNumber(Mockito.anyString(), Mockito.anyString()))
+                    .thenReturn(agency);
+
+            mockMvc.perform(get("/agencies/09111410/2783")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isOk())
+                    .andExpect(jsonPath("$.agencyZipCode").value("09111410"))
+                    .andExpect(jsonPath("$.agencyNumber").value("2783"))
+                    .andExpect(jsonPath("$.agencyName").value(agency.getAgencyName()))
+                    .andExpect(jsonPath("$.agencyTelephone").value(agency.getAgencyTelephone()))
+                    .andExpect(jsonPath("$.agencyEmail").value(agency.getAgencyEmail()))
+                    .andExpect(jsonPath("$.agencyAddress").value(agency.getAgencyAddress()));
+        }
+
+        @Test
+        void getAgencyByCepAndNumberNotFound() throws Exception {
+            Mockito.when(agencyUseCases.getAgencyByCepAndNumber(Mockito.anyString(), Mockito.anyString()))
+                    .thenThrow(new AgencyNotFoundException("Agency not found or does not exist"));
+
+            mockMvc.perform(get("/agencies/09111410/2783")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isNotFound());
+        }
+
+        @Test
+        void getAgencyByCepAndNumberInvalidZipCode() throws Exception {
+            mockMvc.perform(get("/agencies/invalid/2783")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void getAgencyByCepAndNumberInvalidAgencyNumber() throws Exception {
+            mockMvc.perform(get("/agencies/09111410/invalid")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isBadRequest());
+        }
+    }
+
+    @Nested
+    class UpdateAgencyTests {
+        @Test
+        void updateAgency() throws Exception {
+            UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
+            Mockito.doNothing().when(agencyUseCases).updateAgency(Mockito.any());
+
+            mockMvc.perform(patch("/agencies/09111410/2783")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .header("If-Match", "\"1\"")
+                            .content(objectMapper.writeValueAsString(updateAgencyDto)))
+                    .andExpect(status().isOk());
+        }
+
+        @Test
+        void updateAgencyWithInvalidZipCode() throws Exception {
+            UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
+
+            mockMvc.perform(patch("/agencies/invalid/2783")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .header("If-Match", "\"1\"")
+                            .content(objectMapper.writeValueAsString(updateAgencyDto)))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void updateAgencyWithInvalidAgencyNumber() throws Exception {
+            UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
+
+            mockMvc.perform(patch("/agencies/09111410/invalid")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .header("If-Match", "\"1\"")
+                            .content(objectMapper.writeValueAsString(updateAgencyDto)))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void updateAgencyWithMissingIfMatchHeader() throws Exception {
+            UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
+
+            mockMvc.perform(patch("/agencies/09111410/2783")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(objectMapper.writeValueAsString(updateAgencyDto)))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void updateAgencyWithVersionMismatch() throws Exception {
+            UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
+            Mockito.doThrow(new OptimisticLockingException("Version mismatch - update failed"))
+                    .when(agencyUseCases).updateAgency(Mockito.any());
+
+            mockMvc.perform(patch("/agencies/09111410/2783")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .header("If-Match", "\"1\"")
+                            .content(objectMapper.writeValueAsString(updateAgencyDto)))
+                    .andExpect(status().isPreconditionFailed());
         }
     }
 }

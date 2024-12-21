@@ -6,6 +6,7 @@ import br.com.santander.nearagencyapi.domain.Agency;
 import br.com.santander.nearagencyapi.domain.exception.AgencyNotFoundException;
 import br.com.santander.nearagencyapi.domain.exception.GeoCodingException;
 import br.com.santander.nearagencyapi.domain.gateway.AgencyGateway;
+import br.com.santander.nearagencyapi.factory.AgencyFactory;
 import com.google.maps.model.GeocodingResult;
 import com.google.maps.model.Geometry;
 import com.google.maps.model.LatLng;
@@ -46,8 +47,7 @@ class AgencyUseCasesImplTest {
 
     @Test
     void createAgency_success() {
-        Agency agency = new Agency();
-        agency.setAgencyAddress("Av. São Paulo, 250 - Cidade São Jorge, Santo André - SP, 09111-410");
+        Agency agency = AgencyFactory.createDefaultAgency();
 
         GeocodingResult geocodingResult = new GeocodingResult();
         geocodingResult.geometry = new Geometry();
@@ -71,8 +71,7 @@ class AgencyUseCasesImplTest {
 
     @Test
     void createAgency_geoCodingException() {
-        Agency agency = new Agency();
-        agency.setAgencyAddress("Av. São Paulo, 250 - Cidade São Jorge, Santo André - SP, 09111-410");
+        Agency agency = AgencyFactory.createDefaultAgency();
 
         when(geoCodingService.geoCode(anyString())).thenThrow(new RuntimeException("GeoCoding error"));
 
@@ -81,9 +80,7 @@ class AgencyUseCasesImplTest {
 
     @Test
     void getAgencyByCepAndNumber_success() {
-        Agency agency = new Agency();
-        agency.setAgencyZipCode("09111410");
-        agency.setAgencyNumber("2783");
+        Agency agency = AgencyFactory.createDefaultAgency();
 
         when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.of(agency));
 
@@ -97,5 +94,25 @@ class AgencyUseCasesImplTest {
         when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.empty());
 
         assertThrows(AgencyNotFoundException.class, () -> agencyUseCases.getAgencyByCepAndNumber("09111410", "2783"));
+    }
+
+    @Test
+    void updateAgency_success() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+
+        when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.of(agency));
+
+        agencyUseCases.updateAgency(agency);
+
+        verify(agencyGateway).update(agency);
+    }
+
+    @Test
+    void updateAgency_notFound() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+
+        when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.empty());
+
+        assertThrows(AgencyNotFoundException.class, () -> agencyUseCases.updateAgency(agency));
     }
 }

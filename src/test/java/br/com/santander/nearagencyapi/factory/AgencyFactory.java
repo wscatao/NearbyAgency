@@ -2,6 +2,7 @@ package br.com.santander.nearagencyapi.factory;
 
 import br.com.santander.nearagencyapi.domain.Agency;
 import br.com.santander.nearagencyapi.interfaces.dto.AgencyDto;
+import br.com.santander.nearagencyapi.interfaces.dto.UpdateAgencyDto;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class AgencyFactory {
                 "Atendimento Empresas",
                 "Acessibilidade"
         ));
+        agency.setVersion(1L);
         return agency;
     }
 
@@ -60,5 +62,14 @@ public class AgencyFactory {
     public static AgencyDto createWithMissingFields() {
         AgencyDto agencyDto = new AgencyDto();
         return agencyDto;
+    }
+
+    public static UpdateAgencyDto createDefaultUpdateAgencyDto() {
+        UpdateAgencyDto updateAgencyDto = new UpdateAgencyDto();
+        updateAgencyDto.setAgencyName("Name");
+        updateAgencyDto.setAgencyTelephone("1140044829");
+        updateAgencyDto.setAgencyEmail("abc@gmail.com");
+        updateAgencyDto.setServices(List.of("Service 1", "Service 2"));
+        return updateAgencyDto;
     }
 }
