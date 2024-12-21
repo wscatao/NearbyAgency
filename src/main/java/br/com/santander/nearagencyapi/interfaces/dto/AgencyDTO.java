@@ -3,6 +3,7 @@ package br.com.santander.nearagencyapi.interfaces.dto;
 import br.com.santander.nearagencyapi.domain.Agency;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -36,6 +37,7 @@ public class AgencyDto {
     @NotBlank(message = "The agency address is required")
     private String agencyAddress;
 
+    @NotNull(message = "The services list cannot be null")
     private List<String> services;
 
     public static AgencyDto fromAgency(Agency agency) {

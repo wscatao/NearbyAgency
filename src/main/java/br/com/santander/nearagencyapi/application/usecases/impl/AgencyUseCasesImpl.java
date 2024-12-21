@@ -54,4 +54,17 @@ public class AgencyUseCasesImpl implements AgencyUseCases {
             return agency.get();
         }
     }
+
+    @Override
+    public void updateAgency(Agency agency) {
+        ensureAgencyExists(agency);
+        agencyGateway.update(agency);
+    }
+
+    private void ensureAgencyExists(Agency agency) {
+        Optional<Agency> optionalAgency = agencyGateway.findByCepAndNumber(agency.getAgencyZipCode(), agency.getAgencyNumber());
+        if (optionalAgency.isEmpty()) {
+            throw new AgencyNotFoundException("Agency not found or does not exist");
+        }
+    }
 }

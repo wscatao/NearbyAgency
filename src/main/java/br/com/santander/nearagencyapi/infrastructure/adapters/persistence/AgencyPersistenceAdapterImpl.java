@@ -2,10 +2,12 @@ package br.com.santander.nearagencyapi.infrastructure.adapters.persistence;
 
 import br.com.santander.nearagencyapi.domain.Agency;
 import br.com.santander.nearagencyapi.domain.gateway.AgencyGateway;
+import br.com.santander.nearagencyapi.infrastructure.adapters.exception.OptimisticLockingException;
 import br.com.santander.nearagencyapi.infrastructure.model.AgencyModel;
 import io.awspring.cloud.dynamodb.DynamoDbTemplate;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
+import software.amazon.awssdk.services.dynamodb.model.ConditionalCheckFailedException;
 
 import java.util.Optional;
 
@@ -61,7 +63,33 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
         agency.setGeoHash(agencyModel.getGeoHash());
         agency.setLatitude(agencyModel.getLatitude());
         agency.setLongitude(agencyModel.getLongitude());
+        agency.setVersion(agencyModel.getVersion());
 
         return Optional.of(agency);
+    }
+
+    @Override
+    public void update(Agency agency) {
+
+        Key key = Key.builder()
+                .partitionValue(agency.getAgencyZipCode())
+                .sortValue(agency.getAgencyNumber())
+                .build();
+
+        AgencyModel agencyModel = dynamoDbTemplate.load(key, AgencyModel.class);
+
+        if(agencyModel != null) {
+            agencyModel.setAgencyName(agency.getAgencyName());
+            agencyModel.setAgencyTelephone(agency.getAgencyTelephone());
+            agencyModel.setAgencyEmail(agency.getAgencyEmail());
+            agencyModel.setServices(agency.getServices());
+            agencyModel.setVersion(agency.getVersion());
+
+            try {
+                dynamoDbTemplate.update(agencyModel);
+            } catch (ConditionalCheckFailedException e) {
+                throw new OptimisticLockingException("Version mismatch - update failed");
+            }
+        }
     }
 }

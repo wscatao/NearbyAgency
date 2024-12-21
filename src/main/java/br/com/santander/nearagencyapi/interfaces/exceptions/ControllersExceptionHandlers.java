@@ -61,7 +61,7 @@ public class ControllersExceptionHandlers {
         var invalidParams = ex.getBindingResult().getFieldErrors().stream().map(fieldError ->
                 new InvalidParamDto(fieldError.getField(),
                         fieldError.getDefaultMessage(),
-                        fieldError.getRejectedValue().toString()));
+                        fieldError.getRejectedValue() != null ? fieldError.getRejectedValue().toString() : "null"));
 
         problemDetail.setTitle("Validation error");
         problemDetail.setDetail("One or more parameters are invalid");

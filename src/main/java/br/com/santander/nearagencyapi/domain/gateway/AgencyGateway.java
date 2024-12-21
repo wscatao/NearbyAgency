@@ -8,4 +8,5 @@ public interface AgencyGateway {
 
     void save(Agency agency);
     Optional<Agency> findByCepAndNumber(String zipCode, String agencyNumber);
+    void update(Agency agency);
 }

@@ -3,6 +3,7 @@ package br.com.santander.nearagencyapi.infrastructure.model;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import software.amazon.awssdk.enhanced.dynamodb.extensions.annotations.DynamoDbVersionAttribute;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
@@ -28,6 +29,7 @@ public class AgencyModel {
     private String geoHash;
     private double latitude;
     private double longitude;
+    private Long version;
 
     @DynamoDbPartitionKey
     @DynamoDbAttribute("agency_zipcode")
@@ -77,5 +79,10 @@ public class AgencyModel {
 
     public String getFormattedAddress() {
         return formattedAddress;
+    }
+
+    @DynamoDbVersionAttribute
+    public Long getVersion() {
+        return version;
     }
 }

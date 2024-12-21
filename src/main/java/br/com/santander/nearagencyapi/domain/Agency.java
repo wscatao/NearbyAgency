@@ -1,6 +1,7 @@
 package br.com.santander.nearagencyapi.domain;
 
 import br.com.santander.nearagencyapi.interfaces.dto.AgencyDto;
+import br.com.santander.nearagencyapi.interfaces.dto.UpdateAgencyDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +21,7 @@ public class Agency {
     private String geoHash;
     private double latitude;
     private double longitude;
+    private Long version;
 
     public static Agency toAgency(AgencyDto agencyDto) {
         var agency = new Agency();
@@ -30,6 +32,18 @@ public class Agency {
         agency.setAgencyEmail(agencyDto.getAgencyEmail());
         agency.setAgencyAddress(agencyDto.getAgencyAddress());
         agency.setServices(agencyDto.getServices());
+        return agency;
+    }
+
+    public static Agency toAgency(UpdateAgencyDto updateAgencyDto, String agencyZipCode, String agencyNumber, String ifMatch) {
+        var agency = new Agency();
+        agency.setAgencyZipCode(agencyZipCode);
+        agency.setAgencyNumber(agencyNumber);
+        agency.setAgencyName(updateAgencyDto.getAgencyName());
+        agency.setAgencyTelephone(updateAgencyDto.getAgencyTelephone());
+        agency.setAgencyEmail(updateAgencyDto.getAgencyEmail());
+        agency.setServices(updateAgencyDto.getServices());
+        agency.setVersion(Long.parseLong(ifMatch.replace("\"", "")));
         return agency;
     }
 }
