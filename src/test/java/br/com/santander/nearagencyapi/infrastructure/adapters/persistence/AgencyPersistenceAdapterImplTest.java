@@ -121,4 +121,31 @@ class AgencyPersistenceAdapterImplTest {
 
         assertThrows(OptimisticLockingException.class, () -> agencyPersistenceAdapter.update(agency));
     }
+
+    @Test
+    void delete_agency_success() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+        AgencyModel agencyModel = new AgencyModel();
+        agencyModel.setAgencyZipCode(agency.getAgencyZipCode());
+        agencyModel.setAgencyNumber(agency.getAgencyNumber());
+
+        when(dynamoDbTemplate.load(any(Key.class), eq(AgencyModel.class))).thenReturn(agencyModel);
+
+        agencyPersistenceAdapter.delete(agency);
+
+        verify(dynamoDbTemplate, times(1)).delete(any(AgencyModel.class));
+    }
+
+    @Test
+    void delete_agency_version_mismatch() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+        AgencyModel agencyModel = new AgencyModel();
+        agencyModel.setAgencyZipCode(agency.getAgencyZipCode());
+        agencyModel.setAgencyNumber(agency.getAgencyNumber());
+
+        when(dynamoDbTemplate.load(any(Key.class), eq(AgencyModel.class))).thenReturn(agencyModel);
+        doThrow(ConditionalCheckFailedException.class).when(dynamoDbTemplate).delete(any(AgencyModel.class));
+
+        assertThrows(OptimisticLockingException.class, () -> agencyPersistenceAdapter.delete(agency));
+    }
 }

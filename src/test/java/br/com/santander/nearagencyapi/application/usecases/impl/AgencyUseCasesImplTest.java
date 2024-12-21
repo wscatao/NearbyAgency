@@ -7,6 +7,7 @@ import br.com.santander.nearagencyapi.domain.exception.AgencyNotFoundException;
 import br.com.santander.nearagencyapi.domain.exception.GeoCodingException;
 import br.com.santander.nearagencyapi.domain.gateway.AgencyGateway;
 import br.com.santander.nearagencyapi.factory.AgencyFactory;
+import br.com.santander.nearagencyapi.infrastructure.adapters.exception.OptimisticLockingException;
 import com.google.maps.model.GeocodingResult;
 import com.google.maps.model.Geometry;
 import com.google.maps.model.LatLng;
@@ -23,6 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyDouble;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -114,5 +116,23 @@ class AgencyUseCasesImplTest {
         when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.empty());
 
         assertThrows(AgencyNotFoundException.class, () -> agencyUseCases.updateAgency(agency));
+    }
+
+    @Test
+    void deleteAgency_success() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+        when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.of(agency));
+
+        agencyUseCases.deleteAgency(agency);
+
+        verify(agencyGateway, times(1)).delete(agency);
+    }
+
+    @Test
+    void deleteAgency_notFound() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+        when(agencyGateway.findByCepAndNumber("09111410", "2783")).thenReturn(Optional.empty());
+
+        assertThrows(AgencyNotFoundException.class, () -> agencyUseCases.deleteAgency(agency));
     }
 }

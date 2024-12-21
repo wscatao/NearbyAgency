@@ -21,8 +21,16 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(AgencyController.class)
 @AutoConfigureMockMvc(addFilters = false)
@@ -270,6 +278,39 @@ class AgencyControllerTest {
                             .contentType(MediaType.APPLICATION_JSON)
                             .header("If-Match", "\"1\"")
                             .content(objectMapper.writeValueAsString(updateAgencyDto)))
+                    .andExpect(status().isPreconditionFailed());
+        }
+    }
+
+    @Nested
+    class DeleteAgency {
+        @Test
+        void deleteAgency_success() throws Exception {
+            doNothing().when(agencyUseCases).deleteAgency(any());
+
+            mockMvc.perform(delete("/agencies/09111410/2783")
+                            .header("If-Match", "\"1\"")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isNoContent());
+        }
+
+        @Test
+        void deleteAgency_notFound() throws Exception {
+            doThrow(new AgencyNotFoundException("Agency not found")).when(agencyUseCases).deleteAgency(any());
+
+            mockMvc.perform(delete("/agencies/09111410/2783")
+                            .header("If-Match", "\"1\"")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isNotFound());
+        }
+
+        @Test
+        void deleteAgency_versionMismatch() throws Exception {
+            doThrow(new OptimisticLockingException("Version mismatch - delete failed")).when(agencyUseCases).deleteAgency(any());
+
+            mockMvc.perform(delete("/agencies/09111410/2783")
+                            .header("If-Match", "\"wrong-version\"")
+                            .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isPreconditionFailed());
         }
     }
