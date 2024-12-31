@@ -1,9 +1,9 @@
-package br.com.santander.nearagencyapi.infrastructure.adapters.persistence;
+package br.com.agencies.nearbyagencies.infrastructure.adapters.persistence;
 
-import br.com.santander.nearagencyapi.domain.Agency;
-import br.com.santander.nearagencyapi.factory.AgencyFactory;
-import br.com.santander.nearagencyapi.infrastructure.adapters.exception.OptimisticLockingException;
-import br.com.santander.nearagencyapi.infrastructure.model.AgencyModel;
+import br.com.agencies.nearbyagencies.domain.Agency;
+import br.com.agencies.nearbyagencies.factory.AgencyFactory;
+import br.com.agencies.nearbyagencies.infrastructure.adapters.exception.OptimisticLockingException;
+import br.com.agencies.nearbyagencies.infrastructure.model.AgencyModel;
 import io.awspring.cloud.dynamodb.DynamoDbTemplate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -56,13 +56,14 @@ class AgencyPersistenceAdapterImplTest {
     }
 
     @Test
-    void findByCepAndNumber_agency_found() {
-        String zipCode = "09111410";
-        String agencyNumber = "2783";
+    void findByBankCodeAndAgencyNumber_agency_found() {
+        String bankCode = "341"; // Código do banco
+        String agencyNumber = "2783"; // Número da agência
 
         AgencyModel agencyModel = new AgencyModel();
-        agencyModel.setAgencyZipCode(zipCode);
+        agencyModel.setBankCode(bankCode);
         agencyModel.setAgencyNumber(agencyNumber);
+        agencyModel.setAgencyZipCode("09111410");
         agencyModel.setAgencyName("Sto André Av. São Paulo");
         agencyModel.setAgencyTelephone("114004-4828");
         agencyModel.setAgencyEmail("2783@itau.com.br");
@@ -74,21 +75,21 @@ class AgencyPersistenceAdapterImplTest {
 
         when(dynamoDbTemplate.load(any(Key.class), eq(AgencyModel.class))).thenReturn(agencyModel);
 
-        Optional<Agency> result = agencyPersistenceAdapter.findByCepAndNumber(zipCode, agencyNumber);
+        Optional<Agency> result = agencyPersistenceAdapter.findByBankCodeAndAgencyNumber(bankCode, agencyNumber);
 
         assertTrue(result.isPresent());
-        assertEquals(zipCode, result.get().getAgencyZipCode());
+        assertEquals(bankCode, result.get().getBank().getCode());
         assertEquals(agencyNumber, result.get().getAgencyNumber());
     }
 
     @Test
-    void findByCepAndNumber_agency_not_found() {
+    void findByBankCodeAndAgencyNumber_agency_not_found() {
         String zipCode = "09111410";
         String agencyNumber = "2783";
 
         when(dynamoDbTemplate.load(any(Key.class), eq(AgencyModel.class))).thenReturn(null);
 
-        Optional<Agency> result = agencyPersistenceAdapter.findByCepAndNumber(zipCode, agencyNumber);
+        Optional<Agency> result = agencyPersistenceAdapter.findByBankCodeAndAgencyNumber(zipCode, agencyNumber);
 
         assertTrue(result.isEmpty());
     }
@@ -147,5 +148,15 @@ class AgencyPersistenceAdapterImplTest {
         doThrow(ConditionalCheckFailedException.class).when(dynamoDbTemplate).delete(any(AgencyModel.class));
 
         assertThrows(OptimisticLockingException.class, () -> agencyPersistenceAdapter.delete(agency));
+    }
+
+    @Test
+    void delete_agency_not_found() {
+        Agency agency = AgencyFactory.createDefaultAgency();
+        when(dynamoDbTemplate.load(any(Key.class), eq(AgencyModel.class))).thenReturn(null);
+
+        agencyPersistenceAdapter.delete(agency);
+
+        verify(dynamoDbTemplate, times(0)).delete(any(AgencyModel.class));
     }
 }

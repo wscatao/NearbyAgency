@@ -1,12 +1,13 @@
-package br.com.santander.nearagencyapi.interfaces;
+package br.com.agencies.nearbyagencies.interfaces;
 
-import br.com.santander.nearagencyapi.application.usecases.AgencyUseCases;
-import br.com.santander.nearagencyapi.domain.Agency;
-import br.com.santander.nearagencyapi.domain.exception.AgencyNotFoundException;
-import br.com.santander.nearagencyapi.factory.AgencyFactory;
-import br.com.santander.nearagencyapi.infrastructure.adapters.exception.OptimisticLockingException;
-import br.com.santander.nearagencyapi.interfaces.dto.AgencyDto;
-import br.com.santander.nearagencyapi.interfaces.dto.UpdateAgencyDto;
+import br.com.agencies.nearbyagencies.application.usecases.AgencyUseCases;
+import br.com.agencies.nearbyagencies.domain.Agency;
+import br.com.agencies.nearbyagencies.domain.exception.AgencyNotFoundException;
+import br.com.agencies.nearbyagencies.factory.AgencyFactory;
+import br.com.agencies.nearbyagencies.infrastructure.adapters.exception.OptimisticLockingException;
+import br.com.agencies.nearbyagencies.infrastructure.util.Page;
+import br.com.agencies.nearbyagencies.interfaces.dto.CreateAgencyDto;
+import br.com.agencies.nearbyagencies.interfaces.dto.UpdateAgencyDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
+
+import java.util.Collections;
 
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.doNothing;
@@ -52,7 +55,7 @@ class AgencyControllerTest {
     @Nested
     class CreateAgencyTests {
 
-        private AgencyDto agencyDto;
+        private CreateAgencyDto createAgencyDto;
 
         @Test
         void createAgency() throws Exception {
@@ -62,58 +65,58 @@ class AgencyControllerTest {
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(objectMapper.writeValueAsString(AgencyFactory.createDefaultAgencyDto())))
                     .andExpect(status().isCreated())
-                    .andExpect(header().string("Location", "http://localhost/agencies/09111410/2783"));
+                    .andExpect(header().string("Location", "http://localhost/agencies/341/2783"));
         }
 
         @Test
         void createAgencyWithInvalidData() throws Exception {
-            agencyDto = AgencyFactory.createDefaultAgencyDto();
-            agencyDto.setAgencyZipCode(null);
+            createAgencyDto = AgencyFactory.createDefaultAgencyDto();
+            createAgencyDto.setAgencyZipCode(null);
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest());
         }
 
         @Test
         void createAgencyWithInvalidZipCode() throws Exception {
-            agencyDto = AgencyFactory.createWithInvalidZipCode();
+            createAgencyDto = AgencyFactory.createWithInvalidZipCode();
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest());
         }
 
         @Test
         void createAgencyWithInvalidEmail() throws Exception {
-            agencyDto = AgencyFactory.createWithInvalidEmail();
+            createAgencyDto = AgencyFactory.createWithInvalidEmail();
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest());
         }
 
         @Test
         void createAgencyWithMissingFields() throws Exception {
-            agencyDto = AgencyFactory.createWithMissingFields();
+            createAgencyDto = AgencyFactory.createWithMissingFields();
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest());
         }
 
         @Test
         void createAgencyWithInvalidDataProblemDetail() throws Exception {
-            agencyDto = AgencyFactory.createDefaultAgencyDto();
-            agencyDto.setAgencyZipCode("091114100"); // Invalid zip code
+            createAgencyDto = AgencyFactory.createDefaultAgencyDto();
+            createAgencyDto.setAgencyZipCode("091114100"); // Invalid zip code
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest())
                     .andExpect(jsonPath("$.type").value("about:blank"))
                     .andExpect(jsonPath("$.title").value("Validation error"))
@@ -127,11 +130,11 @@ class AgencyControllerTest {
 
         @Test
         void createAgencyWithInvalidZipCodeProblemDetail() throws Exception {
-            agencyDto = AgencyFactory.createWithInvalidZipCode();
+            createAgencyDto = AgencyFactory.createWithInvalidZipCode();
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest())
                     .andExpect(jsonPath("$.type").value("about:blank"))
                     .andExpect(jsonPath("$.title").value("Validation error"))
@@ -145,11 +148,11 @@ class AgencyControllerTest {
 
         @Test
         void createAgencyWithInvalidEmailProblemDetail() throws Exception {
-            agencyDto = AgencyFactory.createWithInvalidEmail();
+            createAgencyDto = AgencyFactory.createWithInvalidEmail();
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest())
                     .andExpect(jsonPath("$.type").value("about:blank"))
                     .andExpect(jsonPath("$.title").value("Validation error"))
@@ -163,11 +166,11 @@ class AgencyControllerTest {
 
         @Test
         void createAgencyWithMissingFieldsProblemDetail() throws Exception {
-            agencyDto = AgencyFactory.createWithMissingFields();
+            createAgencyDto = AgencyFactory.createWithMissingFields();
 
             mockMvc.perform(post("/agencies")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(objectMapper.writeValueAsString(agencyDto)))
+                            .content(objectMapper.writeValueAsString(createAgencyDto)))
                     .andExpect(status().isBadRequest())
                     .andExpect(jsonPath("$.type").value("about:blank"))
                     .andExpect(jsonPath("$.title").value("Validation error"))
@@ -183,13 +186,12 @@ class AgencyControllerTest {
         @Test
         void getAgencyByCepAndNumber() throws Exception {
             Agency agency = AgencyFactory.createDefaultAgency();
-            Mockito.when(agencyUseCases.getAgencyByCepAndNumber(Mockito.anyString(), Mockito.anyString()))
+            Mockito.when(agencyUseCases.getAgency(Mockito.anyString(), Mockito.anyString()))
                     .thenReturn(agency);
 
-            mockMvc.perform(get("/agencies/09111410/2783")
+            mockMvc.perform(get("/agencies/341/2783")
                             .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
-                    .andExpect(jsonPath("$.agencyZipCode").value("09111410"))
                     .andExpect(jsonPath("$.agencyNumber").value("2783"))
                     .andExpect(jsonPath("$.agencyName").value(agency.getAgencyName()))
                     .andExpect(jsonPath("$.agencyTelephone").value(agency.getAgencyTelephone()))
@@ -199,10 +201,10 @@ class AgencyControllerTest {
 
         @Test
         void getAgencyByCepAndNumberNotFound() throws Exception {
-            Mockito.when(agencyUseCases.getAgencyByCepAndNumber(Mockito.anyString(), Mockito.anyString()))
+            Mockito.when(agencyUseCases.getAgency(Mockito.anyString(), Mockito.anyString()))
                     .thenThrow(new AgencyNotFoundException("Agency not found or does not exist"));
 
-            mockMvc.perform(get("/agencies/09111410/2783")
+            mockMvc.perform(get("/agencies/341/2783")
                             .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isNotFound());
         }
@@ -229,7 +231,7 @@ class AgencyControllerTest {
             UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
             Mockito.doNothing().when(agencyUseCases).updateAgency(Mockito.any());
 
-            mockMvc.perform(patch("/agencies/09111410/2783")
+            mockMvc.perform(patch("/agencies/341/2783")
                             .contentType(MediaType.APPLICATION_JSON)
                             .header("If-Match", "\"1\"")
                             .content(objectMapper.writeValueAsString(updateAgencyDto)))
@@ -251,7 +253,7 @@ class AgencyControllerTest {
         void updateAgencyWithInvalidAgencyNumber() throws Exception {
             UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
 
-            mockMvc.perform(patch("/agencies/09111410/invalid")
+            mockMvc.perform(patch("/agencies/341/invalid")
                             .contentType(MediaType.APPLICATION_JSON)
                             .header("If-Match", "\"1\"")
                             .content(objectMapper.writeValueAsString(updateAgencyDto)))
@@ -262,7 +264,7 @@ class AgencyControllerTest {
         void updateAgencyWithMissingIfMatchHeader() throws Exception {
             UpdateAgencyDto updateAgencyDto = AgencyFactory.createDefaultUpdateAgencyDto();
 
-            mockMvc.perform(patch("/agencies/09111410/2783")
+            mockMvc.perform(patch("/agencies/341/2783")
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(objectMapper.writeValueAsString(updateAgencyDto)))
                     .andExpect(status().isBadRequest());
@@ -274,7 +276,7 @@ class AgencyControllerTest {
             Mockito.doThrow(new OptimisticLockingException("Version mismatch - update failed"))
                     .when(agencyUseCases).updateAgency(Mockito.any());
 
-            mockMvc.perform(patch("/agencies/09111410/2783")
+            mockMvc.perform(patch("/agencies/341/2783")
                             .contentType(MediaType.APPLICATION_JSON)
                             .header("If-Match", "\"1\"")
                             .content(objectMapper.writeValueAsString(updateAgencyDto)))
@@ -288,7 +290,7 @@ class AgencyControllerTest {
         void deleteAgency_success() throws Exception {
             doNothing().when(agencyUseCases).deleteAgency(any());
 
-            mockMvc.perform(delete("/agencies/09111410/2783")
+            mockMvc.perform(delete("/agencies/341/2783")
                             .header("If-Match", "\"1\"")
                             .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isNoContent());
@@ -298,7 +300,7 @@ class AgencyControllerTest {
         void deleteAgency_notFound() throws Exception {
             doThrow(new AgencyNotFoundException("Agency not found")).when(agencyUseCases).deleteAgency(any());
 
-            mockMvc.perform(delete("/agencies/09111410/2783")
+            mockMvc.perform(delete("/agencies/341/2783")
                             .header("If-Match", "\"1\"")
                             .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isNotFound());
@@ -308,10 +310,74 @@ class AgencyControllerTest {
         void deleteAgency_versionMismatch() throws Exception {
             doThrow(new OptimisticLockingException("Version mismatch - delete failed")).when(agencyUseCases).deleteAgency(any());
 
-            mockMvc.perform(delete("/agencies/09111410/2783")
+            mockMvc.perform(delete("/agencies/341/2783")
                             .header("If-Match", "\"wrong-version\"")
                             .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isPreconditionFailed());
+        }
+    }
+
+    @Nested
+    class GetNearbyAgenciesTests {
+
+        @Test
+        void getNearbyAgencies_success() throws Exception {
+            Page<Agency> page = new Page<>(Collections.emptyList(), null);
+            Mockito.when(agencyUseCases.getNearbyAgencies(Mockito.anyString(), Mockito.anyString(), Mockito.anyInt(), Mockito.anyString(), Mockito.anyInt()))
+                    .thenReturn(page);
+
+            mockMvc.perform(get("/agencies/341")
+                            .param("zip-code", "12345678")
+                            .param("radius", "5")
+                            .param("next-page-token", "token")
+                            .param("limit", "10")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isOk())
+                    .andExpect(jsonPath("$.data").isArray());
+        }
+
+        @Test
+        void getNearbyAgencies_invalidBankCode() throws Exception {
+            mockMvc.perform(get("/agencies/34")
+                            .param("zip-code", "12345678")
+                            .param("radius", "5")
+                            .param("next-page-token", "token")
+                            .param("limit", "10")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void getNearbyAgencies_invalidZipCode() throws Exception {
+            mockMvc.perform(get("/agencies/341")
+                            .param("zip-code", "123")
+                            .param("radius", "5")
+                            .param("next-page-token", "token")
+                            .param("limit", "10")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void getNearbyAgencies_invalidRadius() throws Exception {
+            mockMvc.perform(get("/agencies/341")
+                            .param("zip-code", "12345678")
+                            .param("radius", "3")
+                            .param("next-page-token", "token")
+                            .param("limit", "10")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        void getNearbyAgencies_invalidLimit() throws Exception {
+            mockMvc.perform(get("/agencies/341")
+                            .param("zip-code", "12345678")
+                            .param("radius", "5")
+                            .param("next-page-token", "token")
+                            .param("limit", "0")
+                            .contentType(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isBadRequest());
         }
     }
 }
