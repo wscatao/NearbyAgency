@@ -3,23 +3,25 @@
 aws dynamodb create-table \
     --table-name agency_registration \
     --attribute-definitions \
-        AttributeName=agency_zipcode,AttributeType=S \
+        AttributeName=bank_code,AttributeType=S \
         AttributeName=agency_number,AttributeType=S \
         AttributeName=geohash_code,AttributeType=S \
     --key-schema \
-        AttributeName=agency_zipcode,KeyType=HASH \
+        AttributeName=bank_code,KeyType=HASH \
         AttributeName=agency_number,KeyType=RANGE \
-    --global-secondary-indexes \
+    --local-secondary-indexes \
         "[
             {
-                \"IndexName\": \"geohash_gsi\",
+                \"IndexName\": \"geohash_lsi\",
                 \"KeySchema\": [
-                    {\"AttributeName\": \"geohash_code\", \"KeyType\": \"HASH\"}
+                    {\"AttributeName\": \"bank_code\", \"KeyType\": \"HASH\"},
+                    {\"AttributeName\": \"geohash_code\", \"KeyType\": \"RANGE\"}
                 ],
                 \"Projection\": {
                     \"ProjectionType\": \"ALL\"
                 }
             }
         ]" \
-    --billing-mode PAY_PER_REQUEST \
-    --endpoint-url http://localhost:4566
+    --provisioned-throughput \
+        ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --region sa-east-1

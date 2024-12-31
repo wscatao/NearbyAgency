@@ -8,11 +8,11 @@
 		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.santander</groupId>
-	<artifactId>NearAgencyApiApplication</artifactId>
+	<groupId>br.com.agencies.nearbyagencies</groupId>
+	<artifactId>NearbyAgenciesApiApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>NearAgencyApiApplication</name>
-	<description>NearAgencyApiApplication é uma interface de programação de aplicativos que facilita a busca de agências próximas com base em um código postal (CEP) fornecido. Ideal para desenvolvedores que precisam integrar serviços de localização em seus projetos, a API fornece informações detalhadas sobre agências disponíveis em uma determinada área, incluindo endereço, distância e horários de funcionamento.</description>
+	<name>NearbyAgenciesApiApplication</name>
+	<description>NearbyAgenciesApiApplication é uma interface de programação de aplicativos que facilita a busca de agências próximas com base em um código postal (CEP) fornecido. Ideal para desenvolvedores que precisam integrar serviços de localização em seus projetos, a API fornece informações detalhadas sobre agências disponíveis em uma determinada área, incluindo endereço, distância e horários de funcionamento.</description>
 	<url/>
 	<licenses>
 		<license/>
