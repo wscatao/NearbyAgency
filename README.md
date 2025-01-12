@@ -40,7 +40,7 @@
     - ✔ **Alta disponibilidade:** Tabelas globais fornecem um banco de dados multirregional e multiativo com SLA de disponibilidade de até 99,999%, oferecendo leituras e gravações locais rápidas e maior resiliência do aplicativo.
     - ✔ **Confiabilidade:** Suportada por backups gerenciados, recuperação pontual e um amplo conjunto de controles de segurança e padrões de conformidade.
 
-### Dependências 🚀
+### 4. Dependências 🚀
 
 1. **Spring Boot Starter Web** 🌐
   - **Por quê?** Facilita a criação de aplicações web com configuração pronta para uso.
@@ -66,7 +66,7 @@
 8. **Logback** 📋
   - **Por quê?** Biblioteca de logs do Spring Boot, oferecendo recursos de log eficientes.
 
-### Instruções para Executar os Testes da Solução 🧪
+### 5. Instruções para Executar os Testes da Solução 🧪
 
 1. **Pré-requisitos** 📋
   - **Java 21**: Certifique-se de ter o JDK 21 instalado. [Download](https://www.oracle.com/java/technologies/javase-jdk21-downloads.html)
