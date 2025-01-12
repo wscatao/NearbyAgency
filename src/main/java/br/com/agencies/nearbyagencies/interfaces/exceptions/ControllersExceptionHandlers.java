@@ -1,6 +1,6 @@
 package br.com.agencies.nearbyagencies.interfaces.exceptions;
 
-import br.com.agencies.nearbyagencies.domain.exception.NearAgencyException;
+import br.com.agencies.nearbyagencies.domain.exception.NearbyAgencyException;
 import br.com.agencies.nearbyagencies.interfaces.exceptions.dto.InvalidParamDto;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
@@ -23,8 +23,8 @@ public class ControllersExceptionHandlers {
      * property
      */
 
-    @ExceptionHandler(NearAgencyException.class)
-    public ProblemDetail handleNearAgencyException(NearAgencyException ex) {
+    @ExceptionHandler(NearbyAgencyException.class)
+    public ProblemDetail handleNearAgencyException(NearbyAgencyException ex) {
         return ex.toProblemDetail();
     }
 

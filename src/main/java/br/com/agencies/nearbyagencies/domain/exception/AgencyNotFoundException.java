@@ -2,7 +2,7 @@ package br.com.agencies.nearbyagencies.domain.exception;
 
 import org.springframework.http.ProblemDetail;
 
-public class AgencyNotFoundException extends NearAgencyException {
+public class AgencyNotFoundException extends NearbyAgencyException {
 
     private final String detail;
 

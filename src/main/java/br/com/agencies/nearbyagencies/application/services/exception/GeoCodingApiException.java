@@ -1,9 +1,9 @@
 package br.com.agencies.nearbyagencies.application.services.exception;
 
-import br.com.agencies.nearbyagencies.domain.exception.NearAgencyException;
+import br.com.agencies.nearbyagencies.domain.exception.NearbyAgencyException;
 import org.springframework.http.ProblemDetail;
 
-public class GeoCodingApiException extends NearAgencyException {
+public class GeoCodingApiException extends NearbyAgencyException {
 
     private final String detail;
 

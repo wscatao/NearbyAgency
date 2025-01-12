@@ -2,7 +2,7 @@ package br.com.agencies.nearbyagencies.domain.exception;
 
 import org.springframework.http.ProblemDetail;
 
-public class GeoCodingException extends NearAgencyException {
+public class GeoCodingException extends NearbyAgencyException {
 
     private final String detail;
 

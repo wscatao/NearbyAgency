@@ -13,6 +13,8 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,6 +36,7 @@ import java.io.IOException;
 @Validated
 public class AgencyController {
 
+    private static final Logger logger = LoggerFactory.getLogger(AgencyController.class);
     private final AgencyUseCases agencyUseCases;
 
     public AgencyController(AgencyUseCases agencyUseCases) {
@@ -60,8 +63,10 @@ public class AgencyController {
             @Min(value = 1, message = "min limit is 1")
             int limit
     ) {
+        logger.info("Received request to get nearby agencies with bankCode: {}, zipCode: {}, radius: {}, nextPageToken: {}, limit: {}", bankCode, zipCode, radius, nextPageToken, limit);
         Page<Agency> nearbyAgencies = agencyUseCases.getNearbyAgencies(bankCode, zipCode, radius, nextPageToken, limit);
         BankAgenciesResponseDto agencies = AgencyAssembler.toGroupedAgenciesResponseDto(nearbyAgencies);
+        logger.info("Returning {} nearby agencies", agencies.data().size());
         return ResponseEntity.ok()
                 .header("Cache-Control", "no-cache")
                 .header("Content-Type", "application/json")
@@ -79,9 +84,10 @@ public class AgencyController {
             @Pattern(regexp = "^\\d{4}$", message = "agency number must have 4 digits")
             String agencyNumber) {
 
+        logger.info("Received request to get agency with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
         Agency agency = agencyUseCases.getAgency(bankCode, agencyNumber);
         AgencyDto createAgencyDto = AgencyDto.fromAgency(agency);
-
+        logger.info("Returning agency with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
         return ResponseEntity.ok()
                 .header("Cache-Control", "no-cache")
                 .header("Content-Type", "application/json")
@@ -91,15 +97,14 @@ public class AgencyController {
 
     @PostMapping
     public ResponseEntity<Void> createAgency(@RequestBody @Validated CreateAgencyDto createAgencyDto) throws IOException, InterruptedException, ApiException {
+        logger.info("Received request to create agency with bankCode: {}", createAgencyDto.getBankNumber());
         var agency = Agency.toAgency(createAgencyDto);
-
         agencyUseCases.createAgency(agency);
-
         var location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{bank-code}/{agency-number}")
                 .buildAndExpand(agency.getBank().getCode(), agency.getAgencyNumber())
                 .toUri();
-
+        logger.info("Agency created with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
         return ResponseEntity.created(location).build();
     }
 
@@ -120,9 +125,10 @@ public class AgencyController {
             @NotBlank(message = "If-Match header is required")
             String ifMatch) {
 
+        logger.info("Received request to update agency with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
         var agency = Agency.toAgency(updateAgencyDto, bankCode, agencyNumber, ifMatch);
         agencyUseCases.updateAgency(agency);
-
+        logger.info("Agency updated with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
         return ResponseEntity.ok().build();
     }
 
@@ -137,8 +143,10 @@ public class AgencyController {
             @Pattern(regexp = "^\\d{4}$", message = "agency number must have 4 digits")
             String agencyNumber) {
 
+        logger.info("Received request to delete agency with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
         Agency agency = Agency.toAgency(bankCode, agencyNumber);
         agencyUseCases.deleteAgency(agency);
+        logger.info("Agency deleted with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
         return ResponseEntity.noContent().build();
     }
 }

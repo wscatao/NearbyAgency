@@ -4,6 +4,8 @@ import br.com.agencies.nearbyagencies.domain.Address;
 import br.com.agencies.nearbyagencies.domain.gateway.ZipCodeClientGateway;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AddressController {
 
     private final ZipCodeClientGateway zipCodeClientGateway;
+    private static final Logger logger = LoggerFactory.getLogger(AddressController.class);
 
     public AddressController(ZipCodeClientGateway zipCodeClientGateway) {
         this.zipCodeClientGateway = zipCodeClientGateway;
@@ -27,6 +30,13 @@ public class AddressController {
             @NotNull(message = "zipcode is required")
             @Size(min = 8, max = 8, message = "zipcode must have 8 characters")
             String zipcode) {
-        return zipCodeClientGateway.getAddress(zipcode);
+
+        logger.info("Requesting address for zipcode: {}", zipcode);
+
+        Address address = zipCodeClientGateway.getAddress(zipcode);
+
+        logger.info("Address found: {}", address);
+
+        return address;
     }
 }

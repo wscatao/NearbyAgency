@@ -2,13 +2,13 @@ package br.com.agencies.nearbyagencies.domain.exception;
 
 import org.springframework.http.ProblemDetail;
 
-public abstract class NearAgencyException extends RuntimeException {
+public abstract class NearbyAgencyException extends RuntimeException {
 
-    public NearAgencyException(String message) {
+    public NearbyAgencyException(String message) {
         super(message);
     }
 
-    public NearAgencyException(Throwable cause) {
+    public NearbyAgencyException(Throwable cause) {
         super(cause);
     }
 

@@ -2,7 +2,7 @@ package br.com.agencies.nearbyagencies.domain.exception;
 
 import org.springframework.http.ProblemDetail;
 
-public class ViaCepGetAddressException extends NearAgencyException {
+public class ViaCepGetAddressException extends NearbyAgencyException {
 
     private final String detail;
 

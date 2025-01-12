@@ -9,6 +9,8 @@ import br.com.agencies.nearbyagencies.infrastructure.model.AgencyModel;
 import br.com.agencies.nearbyagencies.infrastructure.util.Page;
 import br.com.agencies.nearbyagencies.infrastructure.util.PaginationUtils;
 import io.awspring.cloud.dynamodb.DynamoDbTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.enhanced.dynamodb.Expression;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
@@ -25,6 +27,7 @@ import java.util.Optional;
 @Service
 public class AgencyPersistenceAdapterImpl implements AgencyGateway {
 
+    private static final Logger logger = LoggerFactory.getLogger(AgencyPersistenceAdapterImpl.class);
     private final DynamoDbTemplate dynamoDbTemplate;
 
     public AgencyPersistenceAdapterImpl(DynamoDbTemplate dynamoDbTemplate) {
@@ -33,24 +36,38 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
 
     @Override
     public void save(Agency agency) {
+        logger.info("Saving agency with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
+
         AgencyModel agencyModel = toAgencyModel(agency);
         dynamoDbTemplate.save(agencyModel);
+
+        logger.info("Agency saved with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
     }
 
     @Override
     public Optional<Agency> findByBankCodeAndAgencyNumber(String bankCode, String agencyNumber) {
+        logger.info("Finding agency with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
 
         Key key = Key.builder()
                 .partitionValue(bankCode)
                 .sortValue(agencyNumber)
                 .build();
 
-        return Optional.ofNullable(dynamoDbTemplate.load(key, AgencyModel.class))
+        Optional<Agency> agency = Optional.ofNullable(dynamoDbTemplate.load(key, AgencyModel.class))
                 .map(this::toAgency);
+
+        if (agency.isPresent()) {
+            logger.info("Agency found with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
+        } else {
+            logger.warn("Agency not found with bankCode: {}, agencyNumber: {}", bankCode, agencyNumber);
+        }
+
+        return agency;
     }
 
     @Override
     public void update(Agency agency) {
+        logger.info("Updating agency with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
 
         Key key = Key.builder()
                 .partitionValue(agency.getBank().getCode())
@@ -63,14 +80,20 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
             updateAgencyModel(agency, agencyModel);
             try {
                 dynamoDbTemplate.update(agencyModel);
+
+                logger.info("Agency updated with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
             } catch (ConditionalCheckFailedException e) {
+                logger.error("Version mismatch - update failed for agency with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber(), e);
                 throw new OptimisticLockingException("Version mismatch - update failed");
             }
+        } else {
+            logger.warn("Agency not found for update with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
         }
     }
 
     @Override
     public void delete(Agency agency) {
+        logger.info("Deleting agency with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
 
         Key key = Key.builder()
                 .partitionValue(agency.getBank().getCode())
@@ -82,14 +105,20 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
         if (agencyModel != null) {
             try {
                 dynamoDbTemplate.delete(agencyModel);
+
+                logger.info("Agency deleted with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
             } catch (ConditionalCheckFailedException e) {
+                logger.error("Version mismatch - delete failed for agency with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber(), e);
                 throw new OptimisticLockingException("Version mismatch - delete failed");
             }
+        } else {
+            logger.warn("Agency not found for delete with bankCode: {}, agencyNumber: {}", agency.getBank().getCode(), agency.getAgencyNumber());
         }
     }
 
     @Override
     public Page<Agency> findByBankAndGeoHash(String bankCode, String geoHashPrefix, String nextPageToken, int limit) {
+        logger.info("Finding nearby agencies with bankCode: {}, geoHashPrefix: {}, nextPageToken: {}, limit: {}", bankCode, geoHashPrefix, nextPageToken, limit);
 
         Key key = Key.builder()
                 .partitionValue(bankCode)
@@ -114,15 +143,19 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
 
         QueryEnhancedRequest request = requestBuilder.build();
 
-        return dynamoDbTemplate.query(request, AgencyModel.class)
-                .stream().findFirst().map(page -> {
-                    Map<String, AttributeValue> stringAttributeValueMap = page.lastEvaluatedKey();
-                    List<AgencyModel> itens = page.items().stream().limit(limit).toList();
-                    return createPaginatedList(itens, stringAttributeValueMap, limit);
+        Page<Agency> page = dynamoDbTemplate.query(request, AgencyModel.class)
+                .stream().findFirst().map(p -> {
+                    Map<String, AttributeValue> stringAttributeValueMap = p.lastEvaluatedKey();
+                    List<AgencyModel> items = p.items().stream().limit(limit).toList();
+                    return createPaginatedList(items, stringAttributeValueMap, limit);
                 }).orElse(new Page<>(List.of(), null));
+
+        logger.info("Found {} nearby agencies", page.getItems().size());
+
+        return page;
     }
 
-    private Page<Agency> createPaginatedList(List<AgencyModel> itens, Map<String, AttributeValue> stringAttributeValueMap, int limit) {
+    private Page<Agency> createPaginatedList(List<AgencyModel> items, Map<String, AttributeValue> stringAttributeValueMap, int limit) {
         try {
             String nextPageReference = null;
 
@@ -138,11 +171,12 @@ public class AgencyPersistenceAdapterImpl implements AgencyGateway {
                 nextPageReference = PaginationUtils.encodeMapToBase64(lastEvaluatedKeyValue);
             }
 
-            List<Agency> agencies = itens.stream().limit(limit).map(this::toAgency).toList();
+            List<Agency> agencies = items.stream().limit(limit).map(this::toAgency).toList();
 
             return new Page<>(agencies, nextPageReference);
 
         } catch (Exception e) {
+            logger.error("Error creating paginated list", e);
             throw new PaginationException("Error creating paginated list");
         }
     }

@@ -2,7 +2,7 @@ package br.com.agencies.nearbyagencies.domain.exception;
 
 import org.springframework.http.ProblemDetail;
 
-public class NearbyAgenciesException extends NearAgencyException {
+public class NearbyAgenciesException extends NearbyAgencyException {
 
     private final String detail;
 

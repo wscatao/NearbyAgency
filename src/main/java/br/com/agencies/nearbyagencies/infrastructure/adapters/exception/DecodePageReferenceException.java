@@ -1,9 +1,9 @@
 package br.com.agencies.nearbyagencies.infrastructure.adapters.exception;
 
-import br.com.agencies.nearbyagencies.domain.exception.NearAgencyException;
+import br.com.agencies.nearbyagencies.domain.exception.NearbyAgencyException;
 import org.springframework.http.ProblemDetail;
 
-public class DecodePageReferenceException extends NearAgencyException {
+public class DecodePageReferenceException extends NearbyAgencyException {
 
     private final String detail;
 

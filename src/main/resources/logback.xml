@@ -1,0 +1,27 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"app_name":"nearby-agencies"}</customFields>
+            <fieldNames>
+                <timestamp>timestamp</timestamp>
+                <level>level</level>
+                <logger>logger</logger>
+                <message>message</message>
+                <mdc>correlation_id</mdc>
+                <caller>caller</caller>
+            </fieldNames>
+            <includeCallerData>true</includeCallerData>
+            <prettyPrint>true</prettyPrint>
+            <excludeFields>
+                <field>@version</field>
+                <field>thread</field>
+                <field>level_value</field>
+                <field>context</field>
+            </excludeFields>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

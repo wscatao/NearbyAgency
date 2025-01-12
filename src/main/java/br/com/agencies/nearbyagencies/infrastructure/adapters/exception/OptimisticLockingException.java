@@ -1,9 +1,9 @@
 package br.com.agencies.nearbyagencies.infrastructure.adapters.exception;
 
-import br.com.agencies.nearbyagencies.domain.exception.NearAgencyException;
+import br.com.agencies.nearbyagencies.domain.exception.NearbyAgencyException;
 import org.springframework.http.ProblemDetail;
 
-public class OptimisticLockingException extends NearAgencyException {
+public class OptimisticLockingException extends NearbyAgencyException {
 
     private final String detail;
 
