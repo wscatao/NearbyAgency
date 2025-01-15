@@ -16,11 +16,11 @@ public class RestClientConfig {
                 .build();
     }
 
-//    @Bean
-//    @Profile("!local")
-//    public RestClient defaultRestClient() {
-//        return RestClient.builder()
-//                .baseUrl("https://viacep.com.br/")
-//                .build();
-//    }
+    @Bean
+    @Profile("!local")
+    public RestClient defaultRestClient() {
+        return RestClient.builder()
+                .baseUrl("https://viacep.com.br/")
+                .build();
+    }
 }
